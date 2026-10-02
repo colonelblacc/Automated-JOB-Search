@@ -8,6 +8,12 @@
   },
   "scripts": {
     "doctor": "node doctor.mjs",
+    "scan:hardware": "python scripts/run_intelligence_scan.py",
+    "verify:sources": "python scripts/verify_sources.py",
+    "excel": "python scripts/generate_excel_tracker.py",
+    "sync:sheets": "python scripts/sync_to_google_sheets.py",
+    "notify:telegram": "python scripts/telegram_notifier.py",
+    "bot:telegram": "python scripts/telegram_bot.py",
     "or": "node openrouter-runner.mjs",
     "or:scan": "node openrouter-runner.mjs scan",
     "or:pipeline": "node openrouter-runner.mjs pipeline",

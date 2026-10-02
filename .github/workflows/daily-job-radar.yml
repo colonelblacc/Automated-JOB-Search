@@ -1,0 +1,59 @@
+name: Daily Embedded Job Radar & Google Sheets Sync
+
+on:
+  schedule:
+    # 03:00 UTC = 08:30 AM IST every single day
+    - cron: '0 3 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub web or mobile app
+
+jobs:
+  run-radar-and-sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install openpyxl gspread google-auth PyYAML
+
+      - name: Run Relevance & Matching Engine
+        run: |
+          python scripts/relevance_engine.py
+
+      - name: Generate 8-Tab Local Excel Tracker
+        run: |
+          python scripts/generate_excel_tracker.py
+
+      - name: Sync 8 Sheets to Live Google Sheets
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          GOOGLE_SHEET_URL: ${{ secrets.GOOGLE_SHEET_URL }}
+        run: |
+          python scripts/sync_to_google_sheets.py
+
+      - name: Send Daily Job Radar to Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GOOGLE_SHEET_URL: ${{ secrets.GOOGLE_SHEET_URL }}
+        run: |
+          python scripts/telegram_notifier.py
+
+      - name: Commit and Push Updated Tracker Artifacts
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add AI_Embedded_Job_Hunt.xlsx data/ config/ google_sheet_url.txt || true
+          git diff --staged --quiet || git commit -m "chore(auto): daily job radar sync [skip ci]"
+          git push || echo "No changes to commit"

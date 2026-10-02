@@ -1,0 +1,3613 @@
+version: '1.0'
+updated_at: '2026-10-02'
+categories:
+  semiconductor:
+    name: Semiconductor & Chip Design
+    keywords:
+    - RTL
+    - Verilog
+    - VHDL
+    - FPGA
+    - ASIC
+    - VLSI
+    - Verification
+    - Validation
+    - Silicon
+    - SoC
+    - Analog
+    - Digital
+    - Physical Design
+    - Firmware
+    - MTS
+    - Graduate Trainee
+  embedded_systems:
+    name: Embedded Systems & Tier-1 Services
+    keywords:
+    - Embedded C
+    - C++
+    - RTOS
+    - FreeRTOS
+    - Linux
+    - Device Driver
+    - Board Bring-up
+    - Microcontroller
+    - ARM
+    - Cortex
+    - BSP
+    - Firmware
+    - I2C
+    - SPI
+    - UART
+  automotive_ev:
+    name: Automotive & Electric Vehicles
+    keywords:
+    - AUTOSAR
+    - CAN
+    - CAN FD
+    - LIN
+    - UDS
+    - ISO 26262
+    - BMS
+    - Motor Control
+    - ECU
+    - EV
+    - Inverter
+    - Automotive Ethernet
+    - Telematics
+  robotics_autonomous:
+    name: Robotics, Drones & Autonomous Systems
+    keywords:
+    - ROS
+    - ROS2
+    - Robotics
+    - Firmware
+    - Motor Control
+    - Drone
+    - UAV
+    - Sensor Fusion
+    - Computer Vision
+    - Autonomous
+    - SLAM
+    - Actuators
+  iot_hardware_startups:
+    name: IoT, Connected Hardware & DeepTech Startups
+    keywords:
+    - IoT
+    - ESP32
+    - STM32
+    - LoRa
+    - LoRaWAN
+    - BLE
+    - Zigbee
+    - MQTT
+    - Hardware
+    - PCB
+    - Edge AI
+    - TinyML
+    - Sensors
+  kerala_regional:
+    name: Kerala Hardware & Embedded Tech Hub
+    keywords:
+    - Kochi
+    - Thiruvananthapuram
+    - Trivandrum
+    - Kozhikode
+    - Technopark
+    - Infopark
+    - Cyberpark
+    - Embedded
+    - IoT
+    - Firmware
+  hardware_vlsi_fpga:
+    name: Hardware Design, PCB, FPGA & VLSI
+    keywords:
+    - PCB Design
+    - Schematic
+    - KiCad
+    - Altium
+    - FPGA
+    - Verilog
+    - SystemVerilog
+    - UVM
+    - Synthesis
+    - Timing Analysis
+    - Hardware Verification
+  aerospace_defense:
+    name: Aerospace, Avionics & Defense Electronics
+    keywords:
+    - Avionics
+    - Radar
+    - RF
+    - Defense
+    - Telemetry
+    - Satellite
+    - Propulsion
+    - Flight Control
+    - DO-178C
+    - DO-254
+    - MIL-STD
+companies:
+- name: Qualcomm
+  category: semiconductor
+  ats: eightfold
+  careers_url: https://qualcomm.eightfold.ai/careers
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  - Chennai
+  - Noida
+  kerala: false
+  entry_level_titles:
+  - Associate Engineer
+  - Campus Graduate
+  - Engineer - Hardware
+  - Software Engineer - Embedded
+  keywords:
+  - Qualcomm
+  - Snapdragon
+  - Modem
+  - Embedded C
+  - SoC
+  - BSP
+  - Linux
+  - Validation
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Eightfold Talent API
+    last_verified: '2026-10-02'
+- name: Texas Instruments
+  category: semiconductor
+  ats: workday
+  careers_url: https://ti.wd1.myworkdayjobs.com/TI_Careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Software Engineer
+  - Applications Engineer
+  - Design Engineer
+  - Analog Design Trainee
+  keywords:
+  - MSP430
+  - C2000
+  - SimpleLink
+  - Embedded C
+  - MCU
+  - Analog
+  - Power Management
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: Infineon Technologies
+  category: semiconductor
+  ats: custom
+  careers_url: https://jobs.infineon.com
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Young Graduate Trainee
+  - Junior Firmware Engineer
+  - Graduate Trainee - Embedded
+  - Validation Engineer
+  keywords:
+  - AURIX
+  - TriCore
+  - PSoC
+  - Automotive MCU
+  - Power Semiconductor
+  - Embedded C
+  - Bluetooth
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: NXP Semiconductors
+  category: semiconductor
+  ats: workday
+  careers_url: https://nxp.wd3.myworkdayjobs.com/careers
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  - Noida
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - Graduate Trainee
+  - Associate Systems Engineer
+  - Embedded Software Engineer I
+  keywords:
+  - i.MX
+  - S32K
+  - Automotive
+  - MCU
+  - RTOS
+  - Linux
+  - CAN
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: Microchip Technology
+  category: semiconductor
+  ats: workday
+  careers_url: https://microchip.wd5.myworkdayjobs.com/External
+  india_locations:
+  - Bangalore
+  - Chennai
+  - Hyderabad
+  kerala: false
+  entry_level_titles:
+  - Associate Applications Engineer
+  - Engineer I - Software
+  - Graduate Engineer Trainee
+  keywords:
+  - PIC
+  - AVR
+  - SAM MCU
+  - Firmware
+  - Embedded C
+  - MPLAB
+  - FPGA PolarFire
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: STMicroelectronics
+  category: semiconductor
+  ats: custom
+  careers_url: https://stcareers.st.com
+  india_locations:
+  - Greater Noida
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Junior Applications Engineer
+  - Embedded Software Developer
+  - GET - Embedded
+  keywords:
+  - STM32
+  - CubeMX
+  - ARM Cortex
+  - MEMS
+  - Sensors
+  - Embedded C
+  - FreeRTOS
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Analog Devices
+  category: semiconductor
+  ats: workday
+  careers_url: https://analogdevices.wd1.myworkdayjobs.com/External
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  kerala: false
+  entry_level_titles:
+  - Associate Software Engineer
+  - Embedded Systems Trainee
+  - Product Engineer I
+  keywords:
+  - DSP
+  - Blackfin
+  - SHARC
+  - Converter
+  - Mixed-Signal
+  - Embedded C
+  - Validation
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: Renesas Electronics
+  category: semiconductor
+  ats: workday
+  careers_url: https://renesas.wd3.myworkdayjobs.com/Renesas_Careers
+  india_locations:
+  - Bangalore
+  - Noida
+  - Hyderabad
+  kerala: false
+  entry_level_titles:
+  - Graduate Engineer Trainee
+  - Embedded Firmware Engineer I
+  - Validation Trainee
+  keywords:
+  - RL78
+  - RA MCU
+  - RX
+  - RH850
+  - Automotive
+  - Embedded C
+  - Motor Control
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: Lattice Semiconductor
+  category: semiconductor
+  ats: greenhouse
+  careers_url: https://boards.greenhouse.io/latticesemiconductor
+  india_locations:
+  - Hyderabad
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - MTS I
+  - Software Engineer I
+  - FPGA Applications Trainee
+  - Validation Engineer I
+  keywords:
+  - FPGA
+  - iCE40
+  - CrossLink
+  - Verilog
+  - VHDL
+  - TinyML
+  - Edge AI
+  - Radiant
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: VERIFIED
+    note: Direct JSON API
+    last_verified: '2026-10-02'
+- name: AMD
+  category: semiconductor
+  ats: custom
+  careers_url: https://careers.amd.com
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  kerala: false
+  entry_level_titles:
+  - Software Development Engineer 1
+  - Hardware Trainee
+  - FPGA Design Trainee
+  - Validation Engineer
+  keywords:
+  - Xilinx
+  - Zynq
+  - Vivado
+  - FPGA
+  - Verilog
+  - RTL
+  - Embedded Linux
+  - SoC
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Intel
+  category: semiconductor
+  ats: workday
+  careers_url: https://intel.wd1.myworkdayjobs.com/External
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  kerala: false
+  entry_level_titles:
+  - Graduate Intern Technical
+  - Software Engineer - Firmware
+  - Board Design Engineer
+  keywords:
+  - BIOS
+  - UEFI
+  - Firmware
+  - C/C++
+  - FPGA
+  - Altera
+  - Hardware Validation
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: MediaTek
+  category: semiconductor
+  ats: custom
+  careers_url: https://www.mediatek.com/careers
+  india_locations:
+  - Bangalore
+  - Noida
+  kerala: false
+  entry_level_titles:
+  - Engineer - Embedded Software
+  - Graduate Engineer
+  - Modem Software Engineer
+  keywords:
+  - SoC
+  - ARM
+  - Firmware
+  - Embedded Linux
+  - Modem
+  - Connectivity
+  - BLE
+  - Wi-Fi
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Broadcom
+  category: semiconductor
+  ats: workday
+  careers_url: https://broadcom.wd1.myworkdayjobs.com/External_Career
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  kerala: false
+  entry_level_titles:
+  - Associate Software Engineer
+  - Firmware Engineer I
+  - IC Verification Trainee
+  keywords:
+  - ASIC
+  - Firmware
+  - Device Driver
+  - Networking
+  - Ethernet
+  - Embedded C
+  priority: MEDIUM
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: Synopsys
+  category: semiconductor
+  ats: workday
+  careers_url: https://synopsys.wd1.myworkdayjobs.com/Synopsys_Careers
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  - Noida
+  kerala: false
+  entry_level_titles:
+  - R&D Engineer I
+  - Applications Engineer
+  - Verification Trainee
+  keywords:
+  - EDA
+  - SystemVerilog
+  - UVM
+  - RTL
+  - Formal Verification
+  - IP
+  - VLSI
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: Cadence Design Systems
+  category: semiconductor
+  ats: workday
+  careers_url: https://cadence.wd1.myworkdayjobs.com/External_Careers
+  india_locations:
+  - Bangalore
+  - Noida
+  - Hyderabad
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - Software Engineering Trainee
+  - Product Validation Engineer
+  - Design Trainee
+  keywords:
+  - EDA
+  - Tensilica DSP
+  - SystemVerilog
+  - RTL
+  - Emulation
+  - Protium
+  - Palladium
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: Arm
+  category: semiconductor
+  ats: smartrecruiters
+  careers_url: https://careers.smartrecruiters.com/Arm
+  india_locations:
+  - Bangalore
+  - Noida
+  kerala: false
+  entry_level_titles:
+  - Graduate Hardware Engineer
+  - Graduate Embedded Software Engineer
+  keywords:
+  - ARM Cortex-M
+  - Cortex-A
+  - Architecture
+  - Verilog
+  - SystemVerilog
+  - Embedded C
+  - CMSIS
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: SmartRecruiters Public API
+    last_verified: '2026-10-02'
+- name: Samsung Semiconductor India R&D (SSIR)
+  category: semiconductor
+  ats: custom
+  careers_url: https://semiconductor.samsung.com/about-us/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Associate Engineer
+  - Firmware Developer
+  - Design Verification Trainee
+  keywords:
+  - Exynos
+  - Memory
+  - NAND
+  - DRAM
+  - Firmware
+  - SSD
+  - C/C++
+  - RTL
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Micron Technology
+  category: semiconductor
+  ats: eightfold
+  careers_url: https://micron.eightfold.ai/careers
+  india_locations:
+  - Hyderabad
+  - Bangalore
+  - Sanand
+  kerala: false
+  entry_level_titles:
+  - Associate Firmware Engineer
+  - System Integration Trainee
+  - Test Engineer I
+  keywords:
+  - Flash Memory
+  - Firmware
+  - Embedded C
+  - DRAM
+  - PCIe
+  - NVMe
+  - Validation
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Eightfold Talent API
+    last_verified: '2026-10-02'
+- name: Western Digital
+  category: semiconductor
+  ats: smartrecruiters
+  careers_url: https://careers.smartrecruiters.com/WesternDigital
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Associate Engineer Firmware
+  - Hardware Test Trainee
+  - ASIC Verification I
+  keywords:
+  - Flash
+  - SSD Controller
+  - Firmware
+  - RISC-V
+  - Embedded C
+  - C++
+  - Storage
+  priority: MEDIUM
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: SmartRecruiters Public API
+    last_verified: '2026-10-02'
+- name: InSemi Technology
+  category: semiconductor
+  ats: custom
+  careers_url: https://insemitech.com/current-openings
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  - Noida
+  kerala: false
+  entry_level_titles:
+  - Embedded Firmware Engineer
+  - VLSI Design Trainee
+  - Physical Design Engineer
+  keywords:
+  - VLSI
+  - Embedded C
+  - RTL
+  - FPGA
+  - Device Driver
+  - Board Bring-up
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: MosChip Technologies
+  category: semiconductor
+  ats: custom
+  careers_url: https://moschip.com/careers
+  india_locations:
+  - Hyderabad
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Embedded Software Trainee
+  - ASIC Design Engineer
+  - Firmware Engineer
+  keywords:
+  - ASIC
+  - SoC
+  - Embedded C
+  - Linux Kernel
+  - Device Driver
+  - Verilog
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Sankalp Semiconductor
+  category: semiconductor
+  ats: custom
+  careers_url: https://sankalpshemi.com/careers
+  india_locations:
+  - Hubli
+  - Bangalore
+  - Kolkata
+  kerala: false
+  entry_level_titles:
+  - Design Engineer Trainee
+  - Analog Layout Trainee
+  - Embedded Trainee
+  keywords:
+  - Analog
+  - Mixed-Signal
+  - Layout
+  - Embedded C
+  - Digital Design
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Signalchip
+  category: semiconductor
+  ats: custom
+  careers_url: https://signalchip.com/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Embedded Software Engineer
+  - Modem DSP Engineer
+  - Hardware Trainee
+  keywords:
+  - 4G/5G Chipset
+  - Baseband
+  - DSP
+  - RF
+  - Embedded C
+  - FPGA
+  - Verilog
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Saankhya Labs
+  category: semiconductor
+  ats: custom
+  careers_url: https://saankhyalabs.com/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Software Engineer - Embedded
+  - SDR Firmware Developer
+  - Hardware Trainee
+  keywords:
+  - SDR
+  - 5G Broadcast
+  - DSP
+  - Firmware
+  - Embedded C
+  - FPGA
+  - RF
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Tata Elxsi
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.tataelxsi.com/careers
+  india_locations:
+  - Bangalore
+  - Trivandrum
+  - Kochi
+  - Pune
+  - Chennai
+  - Hyderabad
+  kerala: true
+  entry_level_titles:
+  - Engineer - Embedded
+  - Graduate Engineer Trainee
+  - Firmware Developer
+  keywords:
+  - AUTOSAR
+  - Embedded C
+  - Automotive
+  - Medical Electronics
+  - Linux
+  - FreeRTOS
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: KPIT Technologies
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.kpit.com/careers
+  india_locations:
+  - Pune
+  - Bangalore
+  - Kochi
+  kerala: true
+  entry_level_titles:
+  - Trainee Software Engineer
+  - Associate Embedded Engineer
+  - GET Automotive
+  keywords:
+  - AUTOSAR
+  - CAN
+  - Embedded C
+  - Model-Based Development
+  - Simulink
+  - ECU
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Cyient
+  category: embedded_systems
+  ats: workday
+  careers_url: https://cyient.wd3.myworkdayjobs.com/Cyient_Careers
+  india_locations:
+  - Hyderabad
+  - Bangalore
+  - Noida
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - Junior Embedded Engineer
+  - Trainee Hardware Designer
+  - Firmware Engineer
+  keywords:
+  - Embedded C
+  - Avionics
+  - Medical Devices
+  - PCB Design
+  - Microcontrollers
+  priority: MEDIUM
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: Quest Global
+  category: embedded_systems
+  ats: workday
+  careers_url: https://questglobal.wd3.myworkdayjobs.com/Quest_Global_Careers
+  india_locations:
+  - Bangalore
+  - Trivandrum
+  - Hyderabad
+  - Pune
+  kerala: true
+  entry_level_titles:
+  - Trainee Engineer
+  - Embedded Software Engineer
+  - Hardware Test Engineer
+  keywords:
+  - Aerospace
+  - Automotive
+  - Embedded C
+  - Firmware
+  - Verification
+  - Testing
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: L&T Technology Services (LTTS)
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.ltts.com/careers
+  india_locations:
+  - Bangalore
+  - Mysore
+  - Chennai
+  - Hyderabad
+  - Vadodara
+  - Mumbai
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - Engineer - Embedded Systems
+  - Graduate Engineer Trainee
+  - Firmware Trainee
+  keywords:
+  - Embedded C
+  - FreeRTOS
+  - IoT
+  - Automotive
+  - Medical
+  - PCB
+  - Hardware
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Mistral Solutions
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.mistralsolutions.com/careers
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  - Delhi
+  kerala: false
+  entry_level_titles:
+  - Embedded Software Engineer
+  - Hardware Design Engineer
+  - DSP Engineer Trainee
+  keywords:
+  - Defense Electronics
+  - Radar
+  - Board Bring-up
+  - Embedded Linux
+  - FPGA
+  - DSP
+  - SOM
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: eInfochips (Arrow Electronics)
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.einfochips.com/careers
+  india_locations:
+  - Ahmedabad
+  - Bangalore
+  - Pune
+  - Noida
+  - Chennai
+  kerala: false
+  entry_level_titles:
+  - Trainee Engineer - Embedded
+  - Firmware Trainee
+  - ASIC Verification Trainee
+  keywords:
+  - IoT
+  - Camera Firmware
+  - Embedded Linux
+  - Qualcomm BSP
+  - Edge AI
+  - PCB
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Embitel Technologies
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.embitel.com/careers
+  india_locations:
+  - Bangalore
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - Embedded Trainee
+  - Automotive Firmware Engineer
+  - IoT Developer
+  keywords:
+  - AUTOSAR
+  - CAN
+  - BMS
+  - Motor Control
+  - IoT
+  - Embedded C
+  - STM32
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Bosch Global Software Technologies (BGSW)
+  category: embedded_systems
+  ats: smartrecruiters
+  careers_url: https://careers.smartrecruiters.com/BoschGroup
+  india_locations:
+  - Bangalore
+  - Coimbatore
+  - Hyderabad
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - Associate Software Engineer
+  - Graduate Apprentice
+  - Embedded Developer
+  keywords:
+  - Bosch
+  - AUTOSAR
+  - CAN
+  - Embedded C
+  - ECU
+  - Sensors
+  - Automotive
+  - RTOS
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: SmartRecruiters Public API
+    last_verified: '2026-10-02'
+- name: Continental Automotive India
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.continental-jobs.com
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Graduate Engineer Trainee
+  - Junior Software Developer - Embedded
+  keywords:
+  - Continental
+  - ADAS
+  - Braking
+  - Chassis
+  - AUTOSAR
+  - CAN
+  - Embedded C
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Valeo India
+  category: embedded_systems
+  ats: workday
+  careers_url: https://valeo.wd3.myworkdayjobs.com/Valeo_Careers
+  india_locations:
+  - Chennai
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Junior Embedded Software Engineer
+  - GET R&D
+  - Validation Engineer
+  keywords:
+  - Valeo
+  - ADAS
+  - Thermal Management
+  - EV Powertrain
+  - AUTOSAR
+  - Embedded C
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: ZF Group India
+  category: embedded_systems
+  ats: custom
+  careers_url: https://jobs.zf.com
+  india_locations:
+  - Hyderabad
+  - Chennai
+  - Bangalore
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - Graduate Engineer Trainee
+  - Embedded Systems Software Developer
+  keywords:
+  - ZF
+  - Transmission
+  - BMS
+  - Inverter
+  - CAN
+  - AUTOSAR
+  - Embedded C
+  - Safety
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Harman International (Samsung)
+  category: embedded_systems
+  ats: workday
+  careers_url: https://harman.wd1.myworkdayjobs.com/HARMAN
+  india_locations:
+  - Bangalore
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - Associate Engineer - Embedded
+  - Firmware Trainee
+  - Audio Systems Trainee
+  keywords:
+  - Cockpit
+  - Infotainment
+  - Audio DSP
+  - Android Automotive
+  - Linux
+  - QNX
+  - C++
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: Honeywell
+  category: embedded_systems
+  ats: oraclecloud
+  careers_url: https://careers.honeywell.com
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  - Madurai
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - Advanced Software Engineer
+  - Systems Engineer I
+  - Embedded Developer
+  keywords:
+  - Aerospace
+  - Avionics
+  - Building Automation
+  - Sensors
+  - Embedded C
+  - RTOS
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Oracle CX Candidate API
+    last_verified: '2026-10-02'
+- name: Eaton
+  category: embedded_systems
+  ats: workday
+  careers_url: https://eaton.wd5.myworkdayjobs.com/Eaton_Careers
+  india_locations:
+  - Pune
+  - Chennai
+  kerala: false
+  entry_level_titles:
+  - Associate Engineer - Embedded Firmware
+  - Graduate Engineer Trainee
+  keywords:
+  - Power Electronics
+  - Inverter
+  - Firmware
+  - Embedded C
+  - CAN
+  - DSP
+  - Motor Control
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: GE Vernova / GE HealthCare
+  category: embedded_systems
+  ats: workday
+  careers_url: https://jobs.gecareers.com
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  - Noida
+  kerala: false
+  entry_level_titles:
+  - Edison Engineering Development Program (EEDP)
+  - Embedded Software Engineer I
+  keywords:
+  - Energy
+  - Healthcare
+  - Medical Imaging
+  - Control Systems
+  - Embedded C
+  - DSP
+  - FPGA
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: UST
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.ust.com/en/careers
+  india_locations:
+  - Trivandrum
+  - Kochi
+  - Bangalore
+  - Hyderabad
+  - Chennai
+  - Pune
+  kerala: true
+  entry_level_titles:
+  - Associate Software Developer - Embedded
+  - GET
+  - IoT Engineer Trainee
+  keywords:
+  - Semiconductor Services
+  - Embedded Systems
+  - Automotive
+  - IoT
+  - Firmware
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: HCLTech (Engineering & R&D Services)
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.hcltech.com/careers
+  india_locations:
+  - Bangalore
+  - Noida
+  - Chennai
+  - Hyderabad
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - Graduate Engineer Trainee
+  - Software Engineer - Embedded C
+  keywords:
+  - ERS
+  - Embedded Systems
+  - Device Drivers
+  - BSP
+  - Semiconductor Services
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Wipro (EngineeringNXT)
+  category: embedded_systems
+  ats: custom
+  careers_url: https://careers.wipro.com
+  india_locations:
+  - Bangalore
+  - Kochi
+  - Hyderabad
+  - Chennai
+  - Pune
+  kerala: true
+  entry_level_titles:
+  - Project Engineer - Embedded
+  - VLSI Trainee
+  - Firmware Engineer
+  keywords:
+  - EngineeringNXT
+  - Embedded C
+  - Automotive
+  - VLSI
+  - Silicon Engineering
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: TCS (Engineering and Industrial Services)
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.tcs.com/careers
+  india_locations:
+  - Kochi
+  - Trivandrum
+  - Bangalore
+  - Chennai
+  - Hyderabad
+  - Pune
+  kerala: true
+  entry_level_titles:
+  - Assistant System Engineer - Embedded
+  - Digital Innovator
+  keywords:
+  - IoT
+  - Embedded Systems
+  - Control Systems
+  - Automotive
+  - Aerospace
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Ather Energy
+  category: automotive_ev
+  ats: lever
+  careers_url: https://jobs.lever.co/atherenergy
+  india_locations:
+  - Bangalore
+  - Hosur
+  kerala: false
+  entry_level_titles:
+  - Firmware Engineer I
+  - Embedded Software Engineer
+  - BMS Trainee
+  - Hardware Design Trainee
+  keywords:
+  - BMS
+  - Motor Controller
+  - Dashboard
+  - CAN
+  - STM32
+  - FreeRTOS
+  - Embedded C
+  - EV
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: VERIFIED
+    note: Direct JSON API
+    last_verified: '2026-10-02'
+- name: Ola Electric
+  category: automotive_ev
+  ats: custom
+  careers_url: https://olaelectric.com/careers
+  india_locations:
+  - Bangalore
+  - Krishnagiri
+  kerala: false
+  entry_level_titles:
+  - Firmware Engineer
+  - Embedded Software Trainee
+  - Battery Systems Engineer
+  keywords:
+  - EV
+  - BMS
+  - Inverter
+  - CAN
+  - Motor Control
+  - Firmware
+  - Embedded Linux
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Tata Motors
+  category: automotive_ev
+  ats: custom
+  careers_url: https://www.tatamotors.com/careers
+  india_locations:
+  - Pune
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Graduate Engineer Trainee - Electronics
+  - EV Systems Engineer
+  keywords:
+  - EV
+  - BMS
+  - Powertrain
+  - ECU
+  - CAN
+  - Embedded C
+  - Automotive Systems
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Mahindra & Mahindra / Mahindra Electric
+  category: automotive_ev
+  ats: custom
+  careers_url: https://jobs.mahindra.com
+  india_locations:
+  - Bangalore
+  - Chennai
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - GET - Powertrain & Electronics
+  - Embedded Firmware Trainee
+  keywords:
+  - BMS
+  - EV Architecture
+  - CAN
+  - Simulink
+  - Embedded C
+  - Telematics
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: TVS Motor Company
+  category: automotive_ev
+  ats: custom
+  careers_url: https://www.tvsmotor.com/careers
+  india_locations:
+  - Hosur
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Graduate Engineer Trainee - EV Electronics
+  - Firmware Engineer
+  keywords:
+  - EV
+  - iQube
+  - BMS
+  - Motor Control
+  - CAN
+  - Embedded C
+  - Telematics
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Bajaj Auto
+  category: automotive_ev
+  ats: custom
+  careers_url: https://www.bajajauto.com/careers
+  india_locations:
+  - Pune
+  - Aurangabad
+  kerala: false
+  entry_level_titles:
+  - GET R&D
+  - Electronics Design Engineer
+  - Firmware Trainee
+  keywords:
+  - Chetak EV
+  - BMS
+  - Motor Controller
+  - CAN
+  - Embedded C
+  - ECU
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Hero MotoCorp
+  category: automotive_ev
+  ats: custom
+  careers_url: https://www.heromotocorp.com/en-in/careers.html
+  india_locations:
+  - Jaipur
+  - Gurugram
+  - Bangalore (CIT)
+  kerala: false
+  entry_level_titles:
+  - GET - CIT Electronics
+  - Firmware Trainee
+  keywords:
+  - Vida EV
+  - BMS
+  - Telematics
+  - CAN
+  - Microcontroller
+  - Embedded C
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Aptiv
+  category: automotive_ev
+  ats: workday
+  careers_url: https://aptiv.wd1.myworkdayjobs.com/Aptiv_Careers
+  india_locations:
+  - Bangalore
+  - Pune
+  - Chennai
+  kerala: false
+  entry_level_titles:
+  - Associate Software Engineer
+  - Embedded Trainee
+  - Validation Engineer
+  keywords:
+  - ADAS
+  - Smart Vehicle Architecture
+  - AUTOSAR
+  - CAN FD
+  - Embedded C
+  - Ethernet
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: Denso India
+  category: automotive_ev
+  ats: custom
+  careers_url: https://www.denso.com/in/en/careers
+  india_locations:
+  - Manesar
+  - Noida
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Graduate Trainee Engineer
+  - Software Developer - Embedded
+  keywords:
+  - Denso
+  - Powertrain
+  - Electrification
+  - ECU
+  - CAN
+  - Microcontroller
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Magna International
+  category: automotive_ev
+  ats: custom
+  careers_url: https://www.magna.com/company/careers
+  india_locations:
+  - Pune
+  - Bangalore
+  - Chennai
+  kerala: false
+  entry_level_titles:
+  - Junior Embedded Software Engineer
+  - GET Electronics
+  keywords:
+  - e-Powertrain
+  - ADAS
+  - Chassis Control
+  - AUTOSAR
+  - CAN
+  - Embedded C
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: ideaForge
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://www.ideaforgetech.com/careers
+  india_locations:
+  - Navi Mumbai
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Firmware Engineer
+  - Avionics Engineer Trainee
+  - Embedded Systems Engineer
+  keywords:
+  - UAV
+  - Drone
+  - Flight Controller
+  - Firmware
+  - STM32
+  - Embedded C
+  - Telemetry
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: GreyOrange
+  category: robotics_autonomous
+  ats: ashby
+  careers_url: https://jobs.ashbyhq.com/greyorange
+  india_locations:
+  - Gurugram
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Embedded Firmware Engineer I
+  - Robotics Software Trainee
+  - Hardware Test Engineer
+  keywords:
+  - Robotics
+  - AGV
+  - AMR
+  - ROS
+  - Motor Control
+  - Firmware
+  - Embedded C
+  - CAN
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: VERIFIED
+    note: Direct JSON API
+    last_verified: '2026-10-02'
+- name: Genrobotics
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://genrobotics.com/careers
+  india_locations:
+  - Trivandrum
+  - Kochi
+  kerala: true
+  entry_level_titles:
+  - Robotics Embedded Engineer
+  - Firmware Developer
+  - Control Systems Trainee
+  keywords:
+  - Bandicoot
+  - Robotics
+  - Embedded C
+  - STM32
+  - Motor Drivers
+  - Actuators
+  - PCB
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: NewSpace Research and Technologies
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://newspace.co.in/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Embedded Systems Trainee
+  - Avionics Firmware Engineer
+  - Autopilot Developer
+  keywords:
+  - Swarm Drones
+  - UAV
+  - Autopilot
+  - PX4
+  - ArduPilot
+  - STM32
+  - ROS
+  - Embedded C
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Asteria Aerospace
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://asteria.co.in/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Embedded Firmware Trainee
+  - Avionics Engineer I
+  - Hardware Engineer
+  keywords:
+  - Drone
+  - UAV
+  - GCS
+  - Embedded C
+  - Flight Controller
+  - Sensors
+  - Telemetry
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Tonbo Imaging
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://tonboimaging.com/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Embedded Systems Engineer
+  - FPGA Firmware Trainee
+  - Computer Vision HW Trainee
+  keywords:
+  - Thermal Imaging
+  - Night Vision
+  - FPGA
+  - Embedded Linux
+  - DSP
+  - Verilog
+  - Optics
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Ati Motors
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://atimotors.com/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Embedded Software Engineer
+  - Robotics Hardware Trainee
+  - Firmware Developer
+  keywords:
+  - Autonomous Tug
+  - Sherpa
+  - AMR
+  - ROS2
+  - CAN
+  - Embedded C
+  - LiDAR
+  - Motor Drive
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Addverb Technologies
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://addverb.com/careers
+  india_locations:
+  - Noida
+  - Pune
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Robotics Firmware Trainee
+  - Embedded Systems Engineer
+  - Hardware Tester
+  keywords:
+  - Warehouse Robotics
+  - ASRS
+  - AMR
+  - Embedded C
+  - FreeRTOS
+  - Motor Control
+  - CAN
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Unbox Robotics
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://unboxrobotics.com/careers
+  india_locations:
+  - Pune
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Embedded Firmware Trainee
+  - Robotics System Trainee
+  keywords:
+  - Parcel Sorting
+  - Robotics Swarm
+  - STM32
+  - ESP32
+  - ROS
+  - Embedded C
+  - FreeRTOS
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Peppermint Robotics
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://peppermint.robotics/careers
+  india_locations:
+  - Pune
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Robotics Hardware Trainee
+  - Firmware Engineer
+  keywords:
+  - Service Robots
+  - Autonomous Mobile Robots
+  - ROS
+  - Embedded C
+  - Motor Controllers
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Bytebeam
+  category: iot_hardware_startups
+  ats: custom
+  careers_url: https://bytebeam.io/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Firmware Engineer
+  - IoT Systems Developer
+  - Embedded C Developer
+  keywords:
+  - IoT Platform
+  - ESP32
+  - STM32
+  - OTA
+  - MQTT
+  - Embedded C
+  - FreeRTOS
+  - Device Mgmt
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: e-con Systems
+  category: iot_hardware_startups
+  ats: custom
+  careers_url: https://www.e-consystems.com/careers.asp
+  india_locations:
+  - Chennai
+  - Kochi
+  - Bangalore
+  kerala: true
+  entry_level_titles:
+  - Embedded Software Engineer
+  - Camera Firmware Trainee
+  - Hardware Design Trainee
+  keywords:
+  - Embedded Cameras
+  - V4L2
+  - Linux Device Drivers
+  - ISP
+  - NVIDIA Jetson
+  - USB3
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: MangoSense
+  category: iot_hardware_startups
+  ats: custom
+  careers_url: https://mangosense.com/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - IoT Firmware Developer
+  - Hardware Trainee
+  keywords:
+  - Smart Sensors
+  - TinyML
+  - BLE
+  - LoRa
+  - Embedded C
+  - Low Power
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Detect Technologies
+  category: iot_hardware_startups
+  ats: custom
+  careers_url: https://detecttechnologies.com/careers
+  india_locations:
+  - Chennai
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - IoT Hardware Trainee
+  - Firmware Engineer
+  - Edge AI Developer
+  keywords:
+  - Industrial IoT
+  - Ultrasonic Sensors
+  - Drones
+  - Edge AI
+  - Embedded C
+  - STM32
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Boson Motors
+  category: iot_hardware_startups
+  ats: custom
+  careers_url: https://bosonmotors.com/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Embedded Systems Trainee
+  - EV Powertrain Trainee
+  keywords:
+  - Light EV
+  - BMS
+  - Motor Controller
+  - CAN
+  - Embedded C
+  - FreeRTOS
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Agnikul Cosmos
+  category: iot_hardware_startups
+  ats: custom
+  careers_url: https://agnikul.in/careers
+  india_locations:
+  - Chennai
+  kerala: false
+  entry_level_titles:
+  - Avionics Trainee
+  - Embedded Systems Engineer - Flight
+  - Telemetry Trainee
+  keywords:
+  - Rocket Avionics
+  - Telemetry
+  - Flight Computers
+  - FPGA
+  - RTOS
+  - Embedded C
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Skyroot Aerospace
+  category: iot_hardware_startups
+  ats: custom
+  careers_url: https://skyroot.in/careers
+  india_locations:
+  - Hyderabad
+  kerala: false
+  entry_level_titles:
+  - Avionics Engineer I
+  - Firmware Trainee
+  - Guidance & Navigation Trainee
+  keywords:
+  - Launch Vehicle
+  - Avionics
+  - GN&C
+  - FPGA
+  - Embedded C
+  - High Reliability
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Bellatrix Aerospace
+  category: iot_hardware_startups
+  ats: custom
+  careers_url: https://bellatrix.aero/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Avionics Systems Trainee
+  - Propulsion Electronics Engineer
+  keywords:
+  - Satellite Propulsion
+  - Power Electronics
+  - Embedded C
+  - Radiation Tolerant
+  - CAN
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: TOSIL Systems
+  category: kerala_regional
+  ats: custom
+  careers_url: https://www.tosil-systems.com/careers
+  india_locations:
+  - Trivandrum
+  - Kochi
+  kerala: true
+  entry_level_titles:
+  - Embedded Firmware Engineer
+  - Embedded Edge AI/ML Engineer
+  - Embedded Linux Trainee
+  keywords:
+  - Firmware
+  - Edge AI
+  - Embedded Linux
+  - Microcontrollers
+  - IoT
+  - Technopark
+  - Infopark
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: SFO Technologies (NeST Group)
+  category: kerala_regional
+  ats: custom
+  careers_url: https://www.nestgroup.net/careers
+  india_locations:
+  - Kochi
+  - Trivandrum
+  - Bangalore
+  kerala: true
+  entry_level_titles:
+  - Graduate Engineer Trainee - Hardware
+  - Embedded Software Engineer
+  keywords:
+  - EMS
+  - PCB Assembly
+  - Aerospace Electronics
+  - Medical Electronics
+  - Automotive
+  - Firmware
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: NeST Digital
+  category: kerala_regional
+  ats: custom
+  careers_url: https://nestdigital.com/careers
+  india_locations:
+  - Kochi
+  - Trivandrum
+  - Bangalore
+  kerala: true
+  entry_level_titles:
+  - Junior Software Engineer - Embedded
+  - GET Industrial IoT
+  keywords:
+  - Industrial IoT
+  - Mobility
+  - Aerospace
+  - Embedded C
+  - RTOS
+  - Linux
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: QBurst
+  category: kerala_regional
+  ats: custom
+  careers_url: https://www.qburst.com/company/career
+  india_locations:
+  - Trivandrum
+  - Kochi
+  - Kozhikode
+  - Bangalore
+  - Chennai
+  kerala: true
+  entry_level_titles:
+  - Associate Software Engineer - Embedded
+  - IoT Developer Trainee
+  keywords:
+  - IoT
+  - Edge Devices
+  - BLE
+  - ESP32
+  - Firmware
+  - AWS IoT
+  - Embedded C
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Experion Technologies
+  category: kerala_regional
+  ats: custom
+  careers_url: https://www.experionglobal.com/careers
+  india_locations:
+  - Trivandrum
+  - Kochi
+  - Bangalore
+  kerala: true
+  entry_level_titles:
+  - Trainee Software Engineer - IoT
+  - Associate Embedded Developer
+  keywords:
+  - IoT
+  - Automotive
+  - Healthcare
+  - Embedded C
+  - Python
+  - Cloud IoT
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: UL Technology Solutions (ULTS)
+  category: kerala_regional
+  ats: custom
+  careers_url: https://ults.in/careers
+  india_locations:
+  - Kozhikode
+  - Trivandrum
+  - Kochi
+  kerala: true
+  entry_level_titles:
+  - Associate IoT Engineer
+  - Hardware Systems Trainee
+  keywords:
+  - Smart Cities
+  - GIS
+  - IoT Sensors
+  - Embedded C
+  - Cyberpark Kozhikode
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: VVDN Technologies
+  category: kerala_regional
+  ats: custom
+  careers_url: https://www.vvdntech.com/careers
+  india_locations:
+  - Kochi
+  - Gurugram
+  - Chennai
+  - Bangalore
+  - Pollachi
+  - Manesar
+  kerala: true
+  entry_level_titles:
+  - Embedded Software Engineer Trainee
+  - Hardware Design Trainee
+  - FPGA Trainee
+  keywords:
+  - ODM
+  - 5G Telecom
+  - Cameras
+  - Wi-Fi
+  - Automotive
+  - Board Bring-up
+  - Embedded Linux
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Tessolve Semiconductor
+  category: kerala_regional
+  ats: custom
+  careers_url: https://www.tessolve.com/careers
+  india_locations:
+  - Bangalore
+  - Coimbatore
+  - Hyderabad
+  - Kochi
+  - Chennai
+  kerala: true
+  entry_level_titles:
+  - Test Engineer Trainee
+  - Embedded Systems Trainee
+  - PCB Layout Trainee
+  keywords:
+  - ATE Testing
+  - Silicon Validation
+  - Board Design
+  - Embedded C
+  - VLSI
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Siemens EDA (Mentor Graphics)
+  category: hardware_vlsi_fpga
+  ats: custom
+  careers_url: https://jobs.siemens.com
+  india_locations:
+  - Noida
+  - Bangalore
+  - Hyderabad
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - Software Engineer - EDA
+  - Verification Trainee
+  - Application Engineer
+  keywords:
+  - QuestaSim
+  - ModelSim
+  - Calibre
+  - SystemVerilog
+  - VHDL
+  - EDA Tools
+  - FPGA
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: CoreEL Technologies
+  category: hardware_vlsi_fpga
+  ats: custom
+  careers_url: https://coreel.com/careers
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  - Delhi
+  kerala: false
+  entry_level_titles:
+  - FPGA Design Trainee
+  - Embedded Software Engineer
+  - Hardware Design Trainee
+  keywords:
+  - Xilinx Partner
+  - FPGA
+  - Defense
+  - Radar
+  - SDR
+  - Verilog
+  - High Speed PCB
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Achronix Semiconductor
+  category: hardware_vlsi_fpga
+  ats: custom
+  careers_url: https://www.achronix.com/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - FPGA Applications Trainee
+  - Silicon Verification Engineer
+  keywords:
+  - eFPGA
+  - Speedster7t
+  - Verilog
+  - PCIe Gen5
+  - High Bandwidth Memory
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Bharat Electronics Limited (BEL)
+  category: aerospace_defense
+  ats: custom
+  careers_url: https://bel-india.in/careers
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  - Chennai
+  - Ghaziabad
+  - Pune
+  - Navi Mumbai
+  - Kotdwara
+  - Panchkula
+  - Machilipatnam
+  kerala: false
+  entry_level_titles:
+  - Project Engineer - Electronics
+  - Trainee Engineer
+  - Probationary Engineer
+  keywords:
+  - Defense PSU
+  - Radar
+  - Sonar
+  - Avionics
+  - Electronic Warfare
+  - Embedded C
+  - FPGA
+  - DSP
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Hindustan Aeronautics Limited (HAL)
+  category: aerospace_defense
+  ats: custom
+  careers_url: https://hal-india.co.in/Career
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  - Koraput
+  - Nasik
+  - Lucknow
+  - Kanpur
+  kerala: false
+  entry_level_titles:
+  - Management Trainee (Technical)
+  - Design Trainee (Electronics)
+  keywords:
+  - Avionics
+  - Flight Control
+  - Tejas
+  - Radar
+  - DO-178C
+  - DO-254
+  - Embedded Systems
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: DRDO (Defence Research and Development Organisation)
+  category: aerospace_defense
+  ats: custom
+  careers_url: https://www.drdo.gov.in/careers
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  - Delhi
+  - Pune
+  - Kochi (NPOL)
+  kerala: true
+  entry_level_titles:
+  - Scientist 'B'
+  - Junior Research Fellow (JRF) - ECE
+  - Research Associate
+  keywords:
+  - NPOL Kochi
+  - LRDE
+  - RCI
+  - ADE
+  - Radar
+  - Sonar
+  - Avionics
+  - Missile Guidance
+  - FPGA
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Bharat Dynamics Limited (BDL)
+  category: aerospace_defense
+  ats: custom
+  careers_url: https://bdl-india.in/careers
+  india_locations:
+  - Hyderabad
+  - Bhanur
+  - Visakhapatnam
+  kerala: false
+  entry_level_titles:
+  - Management Trainee - Electronics
+  - Project Engineer
+  keywords:
+  - Missile Electronics
+  - Seeker Systems
+  - Guidance
+  - Telemetry
+  - Embedded C
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Tata Advanced Systems Limited (TASL)
+  category: aerospace_defense
+  ats: custom
+  careers_url: https://www.tataadvancedsystems.com/careers
+  india_locations:
+  - Hyderabad
+  - Bangalore
+  - Delhi
+  kerala: false
+  entry_level_titles:
+  - Avionics Trainee
+  - Hardware Systems Engineer
+  - Embedded Firmware Trainee
+  keywords:
+  - Aerospace
+  - Defense
+  - UAV
+  - Radar
+  - Optronics
+  - DO-178C
+  - Embedded C
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: L&T Defence
+  category: aerospace_defense
+  ats: custom
+  careers_url: https://www.larsentoubro.com/defence/careers
+  india_locations:
+  - Talegaon (Pune)
+  - Coimbatore
+  - Bangalore
+  - Mumbai
+  kerala: false
+  entry_level_titles:
+  - Graduate Engineer Trainee - Electronics
+  - Systems Engineer
+  keywords:
+  - Submarine Electronics
+  - Weapon Systems
+  - Control & Automation
+  - Military Radar
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Data Patterns (India) Ltd
+  category: aerospace_defense
+  ats: custom
+  careers_url: https://www.datapatternsindia.com/careers
+  india_locations:
+  - Chennai
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Embedded Software Engineer
+  - FPGA Design Engineer Trainee
+  - Hardware Test Engineer
+  keywords:
+  - Defense Electronics
+  - Radar Processor
+  - Electronic Warfare
+  - Avionics
+  - VPX
+  - FPGA
+  - DSP
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Astra Microwave Products
+  category: aerospace_defense
+  ats: custom
+  careers_url: https://www.astramwp.com/careers
+  india_locations:
+  - Hyderabad
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - RF Design Trainee
+  - Embedded Systems Trainee
+  - Testing Engineer
+  keywords:
+  - RF & Microwave
+  - Radar Modules
+  - Defense Electronics
+  - Telemetry
+  - Signal Processing
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Pixxel
+  category: aerospace_defense
+  ats: lever
+  careers_url: https://jobs.lever.co/pixxel
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Satellite Avionics Engineer Trainee
+  - Firmware Engineer
+  - Hardware Engineer
+  keywords:
+  - Hyperspectral Satellite
+  - Avionics
+  - OBC
+  - CubeSat
+  - Embedded C
+  - FreeRTOS
+  - FPGA
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: VERIFIED
+    note: Direct JSON API
+    last_verified: '2026-10-02'
+- name: Paras Defence and Space Technologies
+  category: aerospace_defense
+  ats: custom
+  careers_url: https://www.parasdefence.com/careers
+  india_locations:
+  - Navi Mumbai
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Optronics Hardware Trainee
+  - Defense Electronics Trainee
+  keywords:
+  - Defense Electronics
+  - EMP Protection
+  - Optronics
+  - Avionics
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Zen Technologies
+  category: aerospace_defense
+  ats: custom
+  careers_url: https://www.zentechnologies.com/careers
+  india_locations:
+  - Hyderabad
+  kerala: false
+  entry_level_titles:
+  - Embedded Software Engineer
+  - Anti-Drone Systems Trainee
+  keywords:
+  - Combat Simulators
+  - Anti-Drone System
+  - Radar
+  - Embedded C
+  - FPGA
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Garuda Aerospace
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://www.garudaaerospace.com/careers
+  india_locations:
+  - Chennai
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Drone Firmware Trainee
+  - Avionics Hardware Trainee
+  keywords:
+  - Agricultural Drones
+  - UAV
+  - Autopilot
+  - STM32
+  - Embedded C
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Dhaksha Unmanned Systems
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://www.dhaksha.com/careers
+  india_locations:
+  - Chennai
+  kerala: false
+  entry_level_titles:
+  - UAV Avionics Trainee
+  - Embedded Systems Developer
+  keywords:
+  - Drones
+  - UAV
+  - Flight Control
+  - Telemetry
+  - Embedded C
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: CynLr (Cybernetics Laboratory)
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://cynlr.com/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Robotics Vision Trainee
+  - Embedded Systems Trainee
+  keywords:
+  - Robotic Arms
+  - Machine Vision
+  - Motion Control
+  - Embedded C
+  - ROS2
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Mukunda Foods (Kitchen Robotics)
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://mukundafoods.com/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Embedded Firmware Engineer
+  - Hardware Control Trainee
+  keywords:
+  - Automation
+  - Robotics
+  - Motor Controllers
+  - STM32
+  - Sensors
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Gridbots Technologies
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://www.gridbots.com/careers.html
+  india_locations:
+  - Ahmedabad
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - Robotics Firmware Trainee
+  - Machine Vision Trainee
+  keywords:
+  - Industrial Robotics
+  - Machine Vision
+  - Underwater Robots
+  - Embedded C
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: BotLab Dynamics
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://botlabdynamics.com/careers
+  india_locations:
+  - Delhi
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Drone Swarm Firmware Trainee
+  - Avionics Trainee
+  keywords:
+  - Drone Swarms
+  - Flight Control
+  - RTK GPS
+  - STM32
+  - Wireless Mesh
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Nordic Semiconductor
+  category: semiconductor
+  ats: custom
+  careers_url: https://www.nordicsemi.com/About-us/Careers
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  kerala: false
+  entry_level_titles:
+  - Junior Applications Engineer
+  - Firmware Verification Trainee
+  keywords:
+  - nRF52
+  - nRF53
+  - BLE
+  - Cellular IoT
+  - Embedded C
+  - Zephyr RTOS
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Silicon Labs
+  category: semiconductor
+  ats: workday
+  careers_url: https://silabs.wd1.myworkdayjobs.com/careers
+  india_locations:
+  - Hyderabad
+  kerala: false
+  entry_level_titles:
+  - Associate Software Engineer
+  - MCU Firmware Trainee
+  keywords:
+  - EFR32
+  - Wireless SoC
+  - Zigbee
+  - Thread
+  - Matter
+  - BLE
+  - Embedded C
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: Marvell Technology
+  category: semiconductor
+  ats: workday
+  careers_url: https://marvell.wd1.myworkdayjobs.com/External_Careers
+  india_locations:
+  - Bangalore
+  - Pune
+  - Hyderabad
+  - Chennai
+  kerala: false
+  entry_level_titles:
+  - Associate Engineer
+  - Firmware Trainee
+  - Design Verification Trainee
+  keywords:
+  - Data Infrastructure
+  - Storage
+  - Networking
+  - PCIe
+  - RISC-V
+  - ARM
+  - Firmware
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: Cirrus Logic
+  category: semiconductor
+  ats: custom
+  careers_url: https://www.cirrus.com/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Associate Applications Engineer
+  - Firmware Trainee
+  keywords:
+  - Audio ICs
+  - DSP
+  - Smart Codecs
+  - Embedded C
+  - Mixed Signal
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Realtek Semiconductor
+  category: semiconductor
+  ats: custom
+  careers_url: https://www.realtek.com/en/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Embedded Firmware Engineer
+  - IC Verification Trainee
+  keywords:
+  - Wi-Fi
+  - Bluetooth
+  - Ethernet
+  - Ameba IoT
+  - Embedded C
+  - SoC
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Nuvoton Technology
+  category: semiconductor
+  ats: custom
+  careers_url: https://www.nuvoton.com/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Field Applications Trainee
+  - MCU Firmware Engineer
+  keywords:
+  - NuMicro
+  - Cortex-M0/M23/M4
+  - Embedded C
+  - MCU
+  - Audio SoC
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Onsemi
+  category: semiconductor
+  ats: custom
+  careers_url: https://www.onsemi.com/careers
+  india_locations:
+  - Bangalore
+  - Noida
+  kerala: false
+  entry_level_titles:
+  - Associate Systems Engineer
+  - Firmware Developer Trainee
+  keywords:
+  - Power Semiconductor
+  - SiC
+  - Image Sensors
+  - Automotive
+  - Firmware
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Ambarella
+  category: semiconductor
+  ats: custom
+  careers_url: https://www.ambarella.com/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Software Engineer - Embedded Linux
+  - CVflow AI Trainee
+  keywords:
+  - Edge AI
+  - Computer Vision SoC
+  - Embedded Linux
+  - ADAS
+  - Camera Firmware
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: EdgeQ
+  category: semiconductor
+  ats: lever
+  careers_url: https://jobs.lever.co/edgeq
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Embedded Software Engineer
+  - Modem DSP Trainee
+  keywords:
+  - 5G Baseband
+  - RISC-V
+  - AI Acceleration
+  - DSP
+  - Firmware
+  - Verilog
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: VERIFIED
+    note: Direct JSON API
+    last_verified: '2026-10-02'
+- name: Simple Energy
+  category: automotive_ev
+  ats: custom
+  careers_url: https://simpleenergy.in/careers
+  india_locations:
+  - Bangalore
+  - Hosur
+  kerala: false
+  entry_level_titles:
+  - Firmware Engineer Trainee
+  - BMS Systems Trainee
+  keywords:
+  - Simple One EV
+  - BMS
+  - Battery Pack
+  - CAN
+  - Motor Controller
+  - STM32
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Ultraviolette Automotive
+  category: automotive_ev
+  ats: custom
+  careers_url: https://www.ultraviolette.com/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Embedded Firmware Engineer
+  - Vehicle Telematics Trainee
+  keywords:
+  - F77 EV
+  - Powertrain
+  - BMS
+  - CAN FD
+  - FreeRTOS
+  - Linux Telematics
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Royal Enfield (E-Mobility)
+  category: automotive_ev
+  ats: custom
+  careers_url: https://www.royalenfield.com/in/en/careers
+  india_locations:
+  - Chennai
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - GET EV Systems
+  - Embedded Firmware Trainee
+  keywords:
+  - Electric Motorcycle
+  - ECU
+  - Motor Control
+  - CAN
+  - BMS
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: BorgWarner India
+  category: automotive_ev
+  ats: workday
+  careers_url: https://borgwarner.wd5.myworkdayjobs.com/BorgWarner_Careers
+  india_locations:
+  - Bangalore
+  - Chennai
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - Junior Embedded Software Developer
+  - GET Powertrain
+  keywords:
+  - Inverter
+  - Power Electronics
+  - AUTOSAR
+  - Embedded C
+  - CAN
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: Vitesco Technologies
+  category: automotive_ev
+  ats: custom
+  careers_url: https://www.vitesco-technologies.com/en-us/careers
+  india_locations:
+  - Bangalore
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - Graduate Engineer Trainee - Embedded
+  - Software Developer
+  keywords:
+  - EV Powertrain
+  - BMS
+  - Inverter
+  - AUTOSAR
+  - CAN
+  - ISO 26262
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Schneider Electric (R&D India)
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.se.com/in/en/about-us/careers
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  kerala: false
+  entry_level_titles:
+  - Associate Firmware Engineer
+  - GET Embedded R&D
+  keywords:
+  - Smart Grid
+  - Energy Management
+  - Modbus
+  - CAN
+  - RTOS
+  - STM32
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Collins Aerospace
+  category: embedded_systems
+  ats: workday
+  careers_url: https://rtx.wd1.myworkdayjobs.com/Collins_Aerospace
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  kerala: false
+  entry_level_titles:
+  - Associate Software Engineer - Avionics
+  - Systems Engineer I
+  keywords:
+  - Avionics
+  - DO-178C
+  - Flight Control
+  - Embedded C
+  - Safety-Critical
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: Visteon Corporation
+  category: embedded_systems
+  ats: workday
+  careers_url: https://visteon.wd1.myworkdayjobs.com/Careers
+  india_locations:
+  - Bangalore
+  - Chennai
+  - Pune
+  - Goa
+  kerala: false
+  entry_level_titles:
+  - Associate Software Engineer - Cockpit
+  - GET Embedded
+  keywords:
+  - Digital Cockpit
+  - Display Audio
+  - AUTOSAR
+  - CAN
+  - Linux
+  - QNX
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST Search
+    last_verified: '2026-10-02'
+- name: Danfoss India
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.danfoss.com/en/about-danfoss/careers
+  india_locations:
+  - Chennai
+  - Pune
+  kerala: false
+  entry_level_titles:
+  - Junior Software Engineer - Drives
+  - Firmware Trainee
+  keywords:
+  - Variable Frequency Drives
+  - Motor Control
+  - DSP
+  - Embedded C
+  - CAN
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Emerson Automation Solutions
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.emerson.com/en-in/careers
+  india_locations:
+  - Pune
+  - Bangalore
+  - Chennai
+  kerala: false
+  entry_level_titles:
+  - Associate Engineer - Firmware
+  - Embedded Trainee
+  keywords:
+  - Industrial Automation
+  - HART Protocol
+  - Modbus
+  - Embedded C
+  - RTOS
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: ABB India
+  category: embedded_systems
+  ats: custom
+  careers_url: https://new.abb.com/careers
+  india_locations:
+  - Bangalore
+  - Chennai
+  - Vadodara
+  kerala: false
+  entry_level_titles:
+  - R&D Associate Engineer - Embedded
+  - Graduate Trainee
+  keywords:
+  - Robotics
+  - Power Grids
+  - Drives
+  - Embedded C
+  - IEC 61850
+  - RTOS
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Siemens Technology India
+  category: embedded_systems
+  ats: custom
+  careers_url: https://jobs.siemens.com
+  india_locations:
+  - Bangalore
+  - Pune
+  - Noida
+  - Chennai
+  kerala: false
+  entry_level_titles:
+  - Engineer - Embedded Software
+  - Graduate Trainee - IoT
+  keywords:
+  - Industrial Automation
+  - PLC
+  - Edge Computing
+  - Embedded C
+  - PROFINET
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Sasken Technologies
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.sasken.com/careers
+  india_locations:
+  - Bangalore
+  - Pune
+  - Kolkata
+  kerala: false
+  entry_level_titles:
+  - Associate Software Engineer - Embedded
+  - Firmware Trainee
+  keywords:
+  - Semiconductor Services
+  - Automotive
+  - Satcom
+  - Embedded C
+  - Android BSP
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Capgemini Engineering (Altran)
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.capgemini.com/in-en/careers
+  india_locations:
+  - Bangalore
+  - Hyderabad
+  - Pune
+  - Chennai
+  - Gurgaon
+  kerala: false
+  entry_level_titles:
+  - Embedded Software Engineer
+  - GET Semiconductor Services
+  keywords:
+  - ER&D
+  - AUTOSAR
+  - Embedded C
+  - VLSI Verification
+  - 5G RAN
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Persistent Systems
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.persistent.com/careers
+  india_locations:
+  - Pune
+  - Bangalore
+  - Hyderabad
+  - Goa
+  kerala: false
+  entry_level_titles:
+  - Software Engineer - Embedded & IoT
+  - Trainee
+  keywords:
+  - IoT
+  - Medical Devices
+  - Embedded Linux
+  - Firmware
+  - BLE
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Cavli Wireless
+  category: iot_hardware_startups
+  ats: custom
+  careers_url: https://www.cavliwireless.com/careers
+  india_locations:
+  - Kochi
+  - Bangalore
+  kerala: true
+  entry_level_titles:
+  - Embedded Firmware Engineer
+  - Cellular IoT Trainee
+  - Hardware Test Engineer
+  keywords:
+  - Cellular IoT
+  - eSIM
+  - LTE-M
+  - NB-IoT
+  - Embedded C
+  - Infopark Kochi
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: GadgEon Smart Systems
+  category: kerala_regional
+  ats: custom
+  careers_url: https://www.gadgeon.com/careers
+  india_locations:
+  - Kochi
+  - Bangalore
+  kerala: true
+  entry_level_titles:
+  - Embedded Software Trainee
+  - IoT Firmware Developer
+  keywords:
+  - Healthcare IoT
+  - Industrial Automation
+  - Embedded C
+  - FreeRTOS
+  - Infopark Kochi
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Falcon Technologies
+  category: kerala_regional
+  ats: custom
+  careers_url: https://falcontechiot.com/careers
+  india_locations:
+  - Kochi
+  - Trivandrum
+  kerala: true
+  entry_level_titles:
+  - IoT Hardware Trainee
+  - Firmware Developer
+  keywords:
+  - Smart Meters
+  - LoRaWAN
+  - STM32
+  - ESP32
+  - Embedded C
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Accubits Technologies
+  category: kerala_regional
+  ats: custom
+  careers_url: https://accubits.com/careers
+  india_locations:
+  - Trivandrum
+  - Kochi
+  kerala: true
+  entry_level_titles:
+  - IoT & Robotics Trainee
+  - Junior Embedded Developer
+  keywords:
+  - TinyML
+  - Edge AI
+  - Robotics
+  - Technopark Trivandrum
+  - Sensors
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Kaynes Technology India
+  category: kerala_regional
+  ats: custom
+  careers_url: https://www.kaynestechnology.net/careers
+  india_locations:
+  - Kochi
+  - Mysore
+  - Bangalore
+  - Chennai
+  kerala: true
+  entry_level_titles:
+  - Graduate Engineer Trainee - PCB/Embedded
+  - Hardware Design Trainee
+  keywords:
+  - EMS
+  - OSAT Semiconductor
+  - PCB Layout
+  - Aerospace Electronics
+  - Defense
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+- name: Centaur Interactive / Centaur Embedded
+  category: kerala_regional
+  ats: custom
+  careers_url: https://www.centaurinteractive.com/careers
+  india_locations:
+  - Kochi
+  - Trivandrum
+  kerala: true
+  entry_level_titles:
+  - Embedded Systems Trainee
+  - Firmware Trainee
+  keywords:
+  - Infopark Kochi
+  - Microcontrollers
+  - STM32
+  - Sensors
+  - Embedded C
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Direct Website / Requires Board or Browser Probe
+    last_verified: '2026-10-02'
+
+- name: Kalkitech
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.kalkitech.com/careers/
+  india_locations:
+  - Bangalore
+  - Kochi
+  kerala: true
+  entry_level_titles:
+  - Graduate Engineer Trainee
+  - Associate Software Engineer
+  - Embedded Software Engineer
+  keywords:
+  - Kalkitech
+  - Embedded C
+  - Smart Grid
+  - Modbus
+  - DLMS
+  - IEC 61850
+  - RTOS
+  - Linux
+  priority: HIGH
+  source:
+    type: career_page
+    automated: true
+    status: MANUAL
+    note: Off-campus portal monitoring
+    last_verified: '2026-10-02'
+- name: Amaya Energy
+  category: automotive_ev
+  ats: custom
+  careers_url: https://amayaenergy.com/careers
+  india_locations:
+  - Kochi
+  - Bangalore
+  kerala: true
+  entry_level_titles:
+  - Embedded Firmware Intern
+  - Junior Hardware Engineer
+  keywords:
+  - Amaya Energy
+  - EV Electronics
+  - BMS
+  - STM32
+  - CAN Bus
+  priority: MEDIUM
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Off-campus career page
+    last_verified: '2026-10-02'

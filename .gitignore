@@ -2,6 +2,14 @@
 cv.md
 article-digest.md
 local/
+.env
+*.env
+crack-atlas-*.json
+service_account.json
+credentials.json
+*.xlsx
+__pycache__/
+*.pyc
 # Everything under data/ is generated or personal at runtime — only .gitkeep
 # placeholders are tracked (verify with `git ls-files data/`). A blanket rule
 # means a new generated file (e.g. a future log/cache addition) is covered
@@ -246,7 +254,14 @@ plan/
 documents/*
 !documents/.gitkeep
 !documents/README.md
-# Intake fingerprints — the recorded source filenames may themselves carry
-# PII (e.g. cv/jane-doe-master-cv.pdf). #1723
 data/intake-state.json
 data/agent-inbox.md
+
+# Google Sheets API Credentials and Local Excel Workbooks
+service_account.json
+credentials.json
+authorized_user.json
+*.json.key
+crack-atlas-*.json
+*.xlsx
+
