@@ -149,7 +149,7 @@ def get_job_and_pipeline_data():
 
     return new_jobs, app_stats
 
-def build_telegram_html(new_jobs, app_stats, max_jobs=5):
+def build_telegram_html(new_jobs, app_stats, max_jobs=15):
     now_str = datetime.now().strftime("%d %b %Y | %I:%M %p IST")
     sheet_url = get_google_sheet_url()
 
@@ -160,7 +160,7 @@ def build_telegram_html(new_jobs, app_stats, max_jobs=5):
         f"⚡ <b>VERIFIED 0–2Y OPENINGS ({len(new_jobs)} Active):</b>\n"
     ]
 
-    top_jobs = new_jobs[:max_jobs]
+    top_jobs = new_jobs[:max_jobs] if max_jobs else new_jobs
     if not top_jobs:
         lines.append("<i>No new unapplied openings today. Portals scanned & healthy!</i>\n")
     else:
@@ -206,31 +206,52 @@ def send_telegram_message(html_text: str):
         return False
 
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
-    payload = {
-        "chat_id": chat_id,
-        "text": html_text,
-        "parse_mode": "HTML",
-        "disable_web_page_preview": True
-    }
 
-    try:
-        data = json.dumps(payload).encode("utf-8")
-        req = urllib.request.Request(
-            url, 
-            data=data, 
-            headers={"Content-Type": "application/json"}
-        )
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            res_json = json.loads(resp.read().decode("utf-8"))
-            if res_json.get("ok"):
-                print("✓ Successfully sent morning job radar to Telegram!")
-                return True
+    # Split message into chunks <= 4000 characters if needed
+    chunks = []
+    if len(html_text) <= 4000:
+        chunks = [html_text]
+    else:
+        # Split by separator or double newlines
+        parts = html_text.split("\n\n")
+        cur_chunk = ""
+        for p in parts:
+            if len(cur_chunk) + len(p) + 2 < 3900:
+                cur_chunk += ("\n\n" if cur_chunk else "") + p
             else:
-                print(f"❌ Telegram API Error: {res_json}")
-                return False
-    except Exception as e:
-        print(f"❌ Failed to send Telegram alert: {e}")
-        return False
+                if cur_chunk:
+                    chunks.append(cur_chunk)
+                cur_chunk = p
+        if cur_chunk:
+            chunks.append(cur_chunk)
+
+    all_ok = True
+    for chunk in chunks:
+        payload = {
+            "chat_id": chat_id,
+            "text": chunk,
+            "parse_mode": "HTML",
+            "disable_web_page_preview": True
+        }
+        try:
+            data = json.dumps(payload).encode("utf-8")
+            req = urllib.request.Request(
+                url, 
+                data=data, 
+                headers={"Content-Type": "application/json"}
+            )
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                res_json = json.loads(resp.read().decode("utf-8"))
+                if not res_json.get("ok"):
+                    print(f"❌ Telegram API Error: {res_json}")
+                    all_ok = False
+        except Exception as e:
+            print(f"❌ Failed to send Telegram alert: {e}")
+            all_ok = False
+
+    if all_ok:
+        print("✓ Successfully sent all active openings to Telegram!")
+    return all_ok
 
 if __name__ == "__main__":
     jobs, stats = get_job_and_pipeline_data()
