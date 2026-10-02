@@ -12,6 +12,7 @@
     "verify:sources": "python scripts/verify_sources.py",
     "excel": "python scripts/generate_excel_tracker.py",
     "sync:sheets": "python scripts/sync_to_google_sheets.py",
+    "verify:screenshots": "node scripts/verify_all_unapplied.mjs",
     "notify:telegram": "python scripts/telegram_notifier.py",
     "bot:telegram": "python scripts/telegram_bot.py",
     "or": "node openrouter-runner.mjs",

@@ -304,7 +304,7 @@ def build_workbook():
             "source_type": "ATS API",
             "ats": "Lever",
             "discovery_sources": "Lever; LinkedIn; Naukri",
-            "job_url": "https://jobs.lever.co/atherenergy",
+            "job_url": "https://www.atherenergy.com/careers",
             "comp_url": "https://atherenergy.com"
         },
         {

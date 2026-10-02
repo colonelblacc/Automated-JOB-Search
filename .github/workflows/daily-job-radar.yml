@@ -27,6 +27,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install openpyxl gspread google-auth PyYAML
 
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Node Dependencies & Playwright Browsers
+        run: |
+          npm ci || npm install
+          npx playwright install --with-deps chromium
+
       - name: Run Relevance & Matching Engine
         run: |
           python scripts/relevance_engine.py
@@ -34,6 +45,10 @@ jobs:
       - name: Generate 8-Tab Local Excel Tracker
         run: |
           python scripts/generate_excel_tracker.py
+
+      - name: Verify Liveness & Capture Screenshots (Playwright)
+        run: |
+          node scripts/verify_all_unapplied.mjs
 
       - name: Sync 8 Sheets to Live Google Sheets
         env:
