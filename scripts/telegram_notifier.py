@@ -121,35 +121,54 @@ def get_job_and_pipeline_data():
 
     # 2. Parse APPLICATIONS
     app_stats = {"total": 0, "under_review": 0, "interview": 0, "rejected": 0, "offer": 0}
+    active_interviews = []
     if "APPLICATIONS" in wb.sheetnames:
         ws_app = wb["APPLICATIONS"]
-        headers_app = [cell.value for cell in ws_app[1]]
-        status_col = None
-        for i, h in enumerate(headers_app):
-            if h and "status" in str(h).lower():
-                status_col = i
-                break
+        headers_app = [str(cell.value or "").strip().lower() for cell in ws_app[1]]
+        def app_col(n):
+            for i, h in enumerate(headers_app):
+                if n in h:
+                    return i
+            return None
 
-        if status_col is not None:
-            for row in ws_app.iter_rows(min_row=2, values_only=True):
-                if not row or not any(row):
-                    continue
-                st = str(row[status_col] or "").strip().upper()
-                if not st:
-                    continue
-                app_stats["total"] += 1
-                if "INTERVIEW" in st:
-                    app_stats["interview"] += 1
-                elif "REJECT" in st:
-                    app_stats["rejected"] += 1
-                elif "OFFER" in st:
-                    app_stats["offer"] += 1
-                else:
-                    app_stats["under_review"] += 1
+        c_app_comp = app_col("company")
+        c_app_role = app_col("role") or app_col("job title")
+        c_app_stat = app_col("status")
+        c_app_stage = app_col("detail") or app_col("stage")
+        c_app_next = app_col("next") or app_col("follow")
+        c_app_notes = app_col("notes")
 
-    return new_jobs, app_stats
+        for row in ws_app.iter_rows(min_row=2, values_only=True):
+            if not row or not any(row):
+                continue
+            st = str(row[c_app_stat] or "").strip().upper() if c_app_stat is not None else ""
+            if not st:
+                continue
+            app_stats["total"] += 1
+            if "INTERVIEW" in st:
+                app_stats["interview"] += 1
+                comp = str(row[c_app_comp] or "Company") if c_app_comp is not None else "Company"
+                role = str(row[c_app_role] or "Role") if c_app_role is not None else "Role"
+                stage = str(row[c_app_stage] or "Interview") if c_app_stage is not None else "Interview"
+                next_act = str(row[c_app_next] or "") if c_app_next is not None else ""
+                notes = str(row[c_app_notes] or "") if c_app_notes is not None else ""
+                active_interviews.append({
+                    "company": comp,
+                    "role": role,
+                    "stage": stage,
+                    "next_action": next_act,
+                    "notes": notes
+                })
+            elif "REJECT" in st:
+                app_stats["rejected"] += 1
+            elif "OFFER" in st:
+                app_stats["offer"] += 1
+            else:
+                app_stats["under_review"] += 1
 
-def build_telegram_html(new_jobs, app_stats, max_jobs=15):
+    return new_jobs, app_stats, active_interviews
+
+def build_telegram_html(new_jobs, app_stats, max_jobs=15, active_interviews=None):
     now_str = datetime.now().strftime("%d %b %Y | %I:%M %p IST")
     sheet_url = get_google_sheet_url()
 
@@ -176,6 +195,16 @@ def build_telegram_html(new_jobs, app_stats, max_jobs=15):
                 lines.append(f"   👉 <a href=\"{url}\"><b>View & Apply Directly</b></a>\n")
             else:
                 lines.append(f"   👉 <i>Check Company Career Portal</i>\n")
+
+    if active_interviews:
+        lines.append("─────────────────────────")
+        lines.append(f"🎯 <b>ACTIVE INTERVIEW PIPELINE ({len(active_interviews)} In Progress):</b>")
+        for act in active_interviews:
+            lines.append(f"• <b>{act['company']}</b> — {act['role']}")
+            lines.append(f"   📌 <i>Stage:</i> {act['stage']}")
+            if act['next_action'] and act['next_action'] != "-":
+                lines.append(f"   ⏰ <b>Reminder:</b> Follow up / mail on <b>Tuesday ({act['next_action']})</b> if no response received.")
+            lines.append("")
 
     lines.append("─────────────────────────")
     lines.append("📊 <b>APPLICATION PIPELINE:</b>")
@@ -254,8 +283,8 @@ def send_telegram_message(html_text: str):
     return all_ok
 
 if __name__ == "__main__":
-    jobs, stats = get_job_and_pipeline_data()
-    msg = build_telegram_html(jobs, stats)
+    jobs, stats, active = get_job_and_pipeline_data()
+    msg = build_telegram_html(jobs, stats, max_jobs=15, active_interviews=active)
     
     if "--preview" in sys.argv or "--dry-run" in sys.argv:
         print("=" * 60)

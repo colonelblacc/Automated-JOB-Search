@@ -70,13 +70,13 @@ def send_message(chat_id, text, parse_mode="HTML"):
 
 def handle_jobs(chat_id):
     from telegram_notifier import get_job_and_pipeline_data, build_telegram_html
-    jobs, stats = get_job_and_pipeline_data()
-    msg = build_telegram_html(jobs, stats, max_jobs=7)
+    jobs, stats, active = get_job_and_pipeline_data()
+    msg = build_telegram_html(jobs, stats, max_jobs=15, active_interviews=active)
     send_message(chat_id, msg)
 
 def handle_status(chat_id):
     from telegram_notifier import get_job_and_pipeline_data, get_google_sheet_url
-    _, stats = get_job_and_pipeline_data()
+    _, stats, active = get_job_and_pipeline_data()
     sheet_url = get_google_sheet_url()
     text = (
         "📊 <b>APPLICATION PIPELINE STATUS:</b>\n"
