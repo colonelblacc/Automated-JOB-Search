@@ -3705,4 +3705,253 @@ companies:
     status: MANUAL
     note: Student Chapter & Career Portal (https://www.atherenergy.com/student)
     last_verified: '2026-10-04'
+- name: Schneider Electric
+  category: embedded_systems
+  ats: smartrecruiters
+  careers_url: https://careers.se.com
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - R&D Firmware & IoT Engineering Intern
+  - Engineering Graduate Trainee
+  - Associate Firmware Engineer
+  keywords:
+  - Embedded C
+  - ESP32
+  - Modbus
+  - MQTT
+  - RTOS
+  - Power Systems
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: SmartRecruiters API
+    last_verified: '2026-10-05'
+- name: Arm
+  category: semiconductor
+  ats: smartrecruiters
+  careers_url: https://careers.smartrecruiters.com/Arm
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Graduate / Intern - Embedded Software & Systems
+  - Graduate Hardware Engineer
+  - Associate Software Engineer
+  keywords:
+  - ARM Cortex
+  - Cortex-M
+  - Embedded C
+  - Assembly
+  - Architecture
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: SmartRecruiters API
+    last_verified: '2026-10-05'
+- name: Western Digital
+  category: semiconductor
+  ats: smartrecruiters
+  careers_url: https://careers.smartrecruiters.com/WesternDigital
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Firmware Engineering Intern - Storage & Silicon
+  - Associate Firmware Engineer
+  - ASIC Trainee
+  keywords:
+  - Embedded C
+  - PCIe
+  - NVMe
+  - RTOS
+  - Flash Firmware
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: SmartRecruiters API
+    last_verified: '2026-10-05'
+- name: Pixxel Space
+  category: aerospace_defense
+  ats: lever
+  careers_url: https://jobs.lever.co/pixxel
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Avionics & Embedded Satellite Systems Intern
+  - Satellite Hardware Engineer
+  - Spacecraft Software Trainee
+  keywords:
+  - STM32
+  - FreeRTOS
+  - CAN
+  - Telemetry
+  - Satellite Avionics
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Lever ATS API
+    last_verified: '2026-10-05'
+- name: River Mobility
+  category: automotive_ev
+  ats: custom
+  careers_url: https://www.rideriver.com/careers
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Embedded Software & BMS Intern
+  - Graduate Engineer Trainee - EV
+  - Electrical Systems Intern
+  keywords:
+  - EV Systems
+  - BMS
+  - CAN Bus
+  - Motor Control
+  - Embedded C
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: EV Startup Career Page
+    last_verified: '2026-10-05'
+- name: Genrobotics
+  category: robotics_autonomous
+  ats: custom
+  careers_url: https://www.genrobotics.org/careers
+  india_locations:
+  - Trivandrum
+  - Kochi
+  kerala: true
+  entry_level_titles:
+  - Embedded Systems & Robotics Intern
+  - Junior Robotics Engineer
+  - Hardware Design Trainee
+  keywords:
+  - STM32
+  - Motor Drivers
+  - Embedded C
+  - Sensors
+  - Robotics
+  - Technopark
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Kerala DeepTech Robotics Portal
+    last_verified: '2026-10-05'
+- name: Continental Automotive
+  category: automotive_ev
+  ats: custom
+  careers_url: https://www.continental.com/en/career/
+  india_locations:
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Graduate Engineer Trainee - Embedded & Autonomous Mobility
+  - Junior Embedded Software Developer
+  - Associate Systems Engineer
+  keywords:
+  - AUTOSAR
+  - CAN FD
+  - Microcontrollers
+  - Embedded C
+  - Automotive Safety
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Continental Careers
+    last_verified: '2026-10-05'
+- name: Siemens EDA
+  category: hardware_vlsi_fpga
+  ats: workday
+  careers_url: https://siemens.wd3.myworkdayjobs.com/siemens_careers
+  india_locations:
+  - Bangalore
+  - Noida
+  - Hyderabad
+  kerala: false
+  entry_level_titles:
+  - Associate Applications Engineer - Embedded & Hardware
+  - Trainee R&D Engineer
+  - Hardware Emulation Intern
+  keywords:
+  - FPGA
+  - Verilog
+  - EDA
+  - Hardware Emulation
+  - C/C++
+  priority: MEDIUM
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday REST API
+    last_verified: '2026-10-05'
+- name: e-con Systems
+  category: embedded_systems
+  ats: custom
+  careers_url: https://www.e-consystems.com/careers.asp
+  india_locations:
+  - Chennai
+  - Kochi
+  kerala: true
+  entry_level_titles:
+  - Embedded Vision & Firmware Engineer
+  - Camera Systems Engineering Intern
+  - Junior Embedded Developer
+  keywords:
+  - Embedded Linux
+  - Camera Drivers
+  - V4L2
+  - USB
+  - STM32
+  - Infopark
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Embedded Vision Careers
+    last_verified: '2026-10-05'
+- name: Agnikul Cosmos
+  category: aerospace_defense
+  ats: custom
+  careers_url: https://agnikul.in/#/career
+  india_locations:
+  - Chennai
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Avionics Hardware & Telemetry Intern
+  - Propulsion Electronics Trainee
+  - Flight Software Engineer I
+  keywords:
+  - Avionics
+  - Telemetry
+  - CAN
+  - Microcontrollers
+  - Spacecraft Electronics
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: SpaceTech Career Portal
+    last_verified: '2026-10-05'
+
 
