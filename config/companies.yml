@@ -160,6 +160,42 @@ companies:
     status: AUTOMATED
     note: Eightfold Talent API
     last_verified: '2026-10-02'
+- name: Lattice Semiconductor
+  category: semiconductor
+  ats: workday
+  careers_url: https://latticesemi.wd5.myworkdayjobs.com/latticesemiconductorscareers
+  india_locations:
+  - Chennai
+  - Pune
+  - Hyderabad
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Member of Technical Staff I
+  - Member of Technical Staff II
+  - Silicon Validation Engineer
+  - UEFI BIOS Engineer
+  - Associate Member of Technical Staff
+  - Graduate Engineer
+  - Intern
+  keywords:
+  - Lattice
+  - FPGA
+  - OpenBMC
+  - C++
+  - Embedded Linux
+  - UEFI
+  - BIOS
+  - Silicon Validation
+  - SERDES
+  - Verilog
+  priority: HIGH
+  source:
+    type: ats
+    automated: true
+    status: AUTOMATED
+    note: Workday CXS API
+    last_verified: '2026-10-05'
 - name: Texas Instruments
   category: semiconductor
   ats: workday

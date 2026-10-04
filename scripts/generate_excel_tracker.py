@@ -65,6 +65,9 @@ APPLIED_FONT = Font(name="Segoe UI", size=9, bold=True, color="3730A3")
 INTERVIEW_FILL = PatternFill(start_color="FBCFE8", end_color="FBCFE8", fill_type="solid")
 INTERVIEW_FONT = Font(name="Segoe UI", size=9, bold=True, color="9D174D")
 
+WATCHLIST_FILL = PatternFill(start_color="FEF3C7", end_color="FEF3C7", fill_type="solid") # Amber 100
+WATCHLIST_FONT = Font(name="Segoe UI", size=9, bold=True, color="92400E")
+
 SKIP_FILL = PatternFill(start_color="F1F5F9", end_color="F1F5F9", fill_type="solid")
 SKIP_FONT = Font(name="Segoe UI", size=9, color="94A3B8")
 
@@ -306,70 +309,6 @@ def build_workbook():
             "discovery_sources": "Lever; LinkedIn; Naukri",
             "job_url": "https://www.atherenergy.com/careers",
             "comp_url": "https://atherenergy.com"
-        },
-        {
-            "posted": "2026-09-27",
-            "seen": today_str,
-            "freshness": "🟢 Fresh (5d)",
-            "days_open": 5,
-            "verified": today_str,
-            "status": "OPEN",
-            "id": "JOB-QCOM-002",
-            "canonical_id": "qualcomm_3084920",
-            "title": "Associate Engineer - Hardware / Embedded",
-            "role_family": "Embedded Software",
-            "company": "Qualcomm",
-            "category": "Semiconductor",
-            "location": "Hyderabad",
-            "work_mode": "Hybrid",
-            "job_type": "Graduate Program / Trainee",
-            "exp": "0–1 yrs",
-            "salary": "Disclosed (₹14–18 LPA)",
-            "eligibility": "ELIGIBLE",
-            "eligibility_reason": "Campus graduate / Associate Engineer level fits 2027 ECE",
-            "score": 91,
-            "level": "HIGH",
-            "action": "APPLY",
-            "why_fit": "Embedded C, ARM Cortex, Linux, Board Bring-up, Verilog, Hyderabad",
-            "gaps": "Modem protocol stack",
-            "source": "Eightfold Talent API",
-            "source_type": "ATS API",
-            "ats": "Eightfold",
-            "discovery_sources": "Eightfold; Naukri; LinkedIn; Indeed",
-            "job_url": "https://qualcomm.eightfold.ai/careers",
-            "comp_url": "https://qualcomm.com"
-        },
-        {
-            "posted": "2026-09-22",
-            "seen": today_str,
-            "freshness": "🟡 Active (10d)",
-            "days_open": 10,
-            "verified": today_str,
-            "status": "OPEN",
-            "id": "JOB-LAT-003",
-            "canonical_id": "lattice_mts1_fpga",
-            "title": "MTS I - FPGA Software & Edge AI Applications",
-            "role_family": "FPGA",
-            "company": "Lattice Semiconductor",
-            "category": "Semiconductor / FPGA",
-            "location": "Hyderabad",
-            "work_mode": "On-site",
-            "job_type": "Full-time",
-            "exp": "0–2 yrs",
-            "salary": "Disclosed (₹9–13 LPA)",
-            "eligibility": "ELIGIBLE",
-            "eligibility_reason": "Verilog & Edge AI project evidence satisfies MTS I requirement",
-            "score": 89,
-            "level": "HIGH",
-            "action": "APPLY",
-            "why_fit": "Verilog, FPGA DSD, TinyML / Edge AI, Python, Radiant tools, Hyderabad",
-            "gaps": "SystemVerilog UVM",
-            "source": "Greenhouse ATS Feed",
-            "source_type": "ATS API",
-            "ats": "Greenhouse",
-            "discovery_sources": "Greenhouse; LinkedIn",
-            "job_url": "https://boards.greenhouse.io/latticesemiconductor",
-            "comp_url": "https://latticesemi.com"
         },
         {
             "posted": "2026-09-29",
@@ -736,7 +675,8 @@ def build_workbook():
         ["APP-2026-023", "JOB-TOS-023", "TOSIL Systems", "Embedded Edge AI & Firmware Engineer", "Firmware", "2026-10-03", "APPLIED", "Application Submitted", "2026-10-03", "2026-10-13", "https://www.tosil-systems.com/careers", "TosilSystems/", "Technopark Trivandrum / KINFRA Kochi. Semiconductor & embedded systems specialist under Murugappa Group. TinyML, FreeRTOS, ARM Cortex/STM32."],
         ["APP-2026-024", "JOB-MIST-024", "Mistral Solutions", "Embedded Software & Hardware Engineer", "Hardware Design", "2026-10-04", "APPLIED", "Application Submitted", "2026-10-04", "2026-10-14", "https://mistralsolutions.com/career/careers-job-listings/", "MistralSolutions/", "Bengaluru. Axiscades defense and aerospace embedded engineering subsidiary. JID-028 (Validation/Firmware) and JID-009 (Hardware Digital) applied."],
         ["APP-2026-025", "JOB-ATHER-025", "Ather Energy", "Intern - Engineering (EV Hardware & Embedded Systems)", "Automotive Embedded", "2026-10-04", "APPLIED", "Application Submitted", "2026-10-04", "2026-10-14", "https://www.atherenergy.com/student", "AtherEnergy/", "Bengaluru R&D Centre. Application submitted via official portal with tailored 2-page resume highlighting 4-layer BLE-to-CAN gateway (ISO 7637-2/DFMEA), custom STM32 dev board, and adaptive LED headlamp glare suppression."],
-        ["APP-2026-026", "JOB-QUAL-026", "Qualcomm", "Interim Engineering Intern_2027_SW (Job ID: 446719785836)", "Embedded Software", "2026-10-04", "TO APPLY", "Tailored Resume Ready", "2026-10-04", "2026-10-05", "https://careers.qualcomm.com/careers/job/446719785836?domain=qualcomm.com&hl=en", "Qualcomm/", "Qualcomm India (Hyderabad/Bangalore/Chennai/Noida). B.Tech 2027 batch. Real-time embedded, Linux kernel/BSP, DMA I2S multimedia, wireless IoT. Tailored 2-page resume generated."]
+        ["APP-2026-026", "JOB-QUAL-026", "Qualcomm", "Interim Engineering Intern_2027_SW (Job ID: 446719785836)", "Embedded Software", "2026-10-04", "WATCHLIST", "Company Watchlist (Monitoring 2027 Cycle)", "2026-10-05", "2026-11-01", "https://careers.qualcomm.com/careers/job/446719785836?domain=qualcomm.com&hl=en", "Qualcomm/", "Monitored company on radar. Complete 2-page tailored resume package prepared in Qualcomm/; actively monitoring 2027 off-campus/intern hiring timeline."],
+        ["APP-2026-027", "JOB-LAT-027", "Lattice Semiconductor", "Member of Technical Staff I — Linux C++ / FPGA (R-103169)", "FPGA", "2026-10-05", "WATCHLIST", "Company Watchlist (Monitoring Daily)", "2026-10-05", "2026-10-15", "https://latticesemi.wd5.myworkdayjobs.com/en-US/latticesemiconductorscareers/job/Chennai-India/Member-of-Technical-Staff-I_R-103169", "LatticeSemiconductor/", "Monitored company on radar. Active Workday API feed configured; tracking Linux C++ / BMC and FPGA Silicon Validation openings."]
     ]
 
     for app in ground_truth_apps:
@@ -769,6 +709,9 @@ def build_workbook():
                 elif cell.value == "TO APPLY":
                     cell.fill = ACTION_ACTION_FILL
                     cell.font = ACTION_ACTION_FONT
+                elif cell.value in ["WATCHLIST", "MONITORING"]:
+                    cell.fill = WATCHLIST_FILL
+                    cell.font = WATCHLIST_FONT
                 elif cell.value == "REJECTED":
                     cell.fill = ERROR_FILL
                     cell.font = ERROR_FONT
@@ -1129,7 +1072,9 @@ def build_workbook():
     sample_archives = [
         ["2026-09-01", today_str, "OLD-001", "Embedded Systems Intern (Summer)", "Firmware", "Qualcomm", "Semiconductor", "Bangalore", "410 / Posting Closed on ATS", "HIGH", 88, "https://qualcomm.eightfold.ai"],
         ["2026-08-20", today_str, "OLD-002", "Graduate Trainee - Hardware Testing", "Test/Debug", "Bosch", "Embedded Services", "Bangalore", "Requisition Filled / Closed", "MEDIUM", 76, "https://careers.smartrecruiters.com/BoschGroup"],
-        ["2026-10-01", today_str, "cavli_iot_fw", "Firmware Engineer - Cellular IoT & Embedded Modules", "IoT", "Cavli Wireless", "IoT / Hardware", "Infopark Kochi", "Verified zero openings on live portal (Keka 404 / closed)", "HIGH", 90, "https://www.cavliwireless.com/careers"]
+        ["2026-10-01", today_str, "cavli_iot_fw", "Firmware Engineer - Cellular IoT & Embedded Modules", "IoT", "Cavli Wireless", "IoT / Hardware", "Infopark Kochi", "Verified zero openings on live portal (Keka 404 / closed)", "HIGH", 90, "https://www.cavliwireless.com/careers"],
+        ["2026-09-27", today_str, "JOB-QCOM-002", "Associate Engineer - Hardware / Embedded", "Embedded Software", "Qualcomm", "Semiconductor", "Hyderabad", "Moved from Dashboard to Company Watchlist on user request", "HIGH", 91, "https://qualcomm.eightfold.ai/careers"],
+        ["2026-09-22", today_str, "JOB-LAT-003", "MTS I - FPGA Software & Edge AI Applications", "FPGA", "Lattice Semiconductor", "Semiconductor / FPGA", "Hyderabad", "Moved from Dashboard to Company Watchlist on user request", "HIGH", 89, "https://latticesemi.wd5.myworkdayjobs.com/latticesemiconductorscareers"]
     ]
     for arch in sample_archives:
         arch_copy = list(arch)
