@@ -3630,3 +3630,33 @@ companies:
     status: MANUAL
     note: Off-campus career page
     last_verified: '2026-10-02'
+- name: Ather Energy
+  category: automotive_ev
+  ats: custom
+  careers_url: https://www.atherenergy.com/careers
+  india_locations:
+  - Bangalore
+  - Hosur
+  kerala: false
+  entry_level_titles:
+  - Intern - Engineering
+  - Graduate Engineer Trainee
+  - Hardware Engineering Intern
+  - Embedded Software Trainee
+  keywords:
+  - EV Systems
+  - BMS
+  - CAN Bus
+  - CAN FD
+  - FreeRTOS
+  - Telematics
+  - STM32
+  - Power Electronics
+  priority: HIGH
+  source:
+    type: career_page
+    automated: false
+    status: MANUAL
+    note: Student Chapter & Career Portal (https://www.atherenergy.com/student)
+    last_verified: '2026-10-04'
+
