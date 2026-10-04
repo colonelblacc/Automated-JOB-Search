@@ -46,7 +46,17 @@ def get_google_sheet_url():
 
 def get_job_and_pipeline_data():
     if not os.path.exists(XLSX_FILE):
-        return [], {}
+        try:
+            print(f"⚠️ {XLSX_FILE} not found on cloud container. Auto-generating fresh tracker...")
+            sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+            from generate_excel_tracker import build_workbook
+            build_workbook()
+        except Exception as e:
+            print(f"❌ Failed to build initial workbook: {e}")
+            return [], {}, []
+
+    if not os.path.exists(XLSX_FILE):
+        return [], {}, []
 
     wb = openpyxl.load_workbook(XLSX_FILE, data_only=True)
     

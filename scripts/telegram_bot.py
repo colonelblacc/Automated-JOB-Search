@@ -125,16 +125,29 @@ def process_update(update):
 
     chat = msg.get("chat", {})
     chat_id = str(chat.get("id"))
+    chat_type = chat.get("type", "unknown")
     text = (msg.get("text") or "").strip()
 
-    # Security check: only allow authorized chat or group
-    if chat_id != str(ALLOWED_CHAT_ID) and str(ALLOWED_CHAT_ID).lstrip("-100") not in chat_id:
+    print(f"📥 Received message: {repr(text)} from chat_id={chat_id} (type={chat_type})")
+
+    # Security check: allow if sent in configured group/channel OR in a private direct message
+    is_group_match = (
+        chat_id == str(ALLOWED_CHAT_ID) or 
+        str(ALLOWED_CHAT_ID).lstrip("-100") in chat_id or
+        chat_id.lstrip("-100") == str(ALLOWED_CHAT_ID).lstrip("-100")
+    )
+    is_private = (chat_type == "private")
+
+    if not (is_group_match or is_private):
+        print(f"⛔ Ignoring command from unauthorized chat_id={chat_id} (configured={ALLOWED_CHAT_ID})")
         return
 
     cmd = text.split()[0].lower() if text else ""
     # Strip bot handle if sent in group e.g. /jobs@Ajith_Job_Radar_Bot
     if "@" in cmd:
         cmd = cmd.split("@")[0]
+
+    print(f"⚡ Processing command: '{cmd}' for chat {chat_id}")
 
     if cmd in ["/start", "/help"]:
         handle_help(chat_id)
