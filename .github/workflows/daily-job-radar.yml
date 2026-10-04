@@ -2,8 +2,8 @@ name: Daily Embedded Job Radar & Google Sheets Sync
 
 on:
   schedule:
-    # 03:00 UTC = 08:30 AM IST every single day
-    - cron: '0 3 * * *'
+    # 03:17 UTC = 08:47 AM IST every single day (off-minute avoids GitHub queue bottleneck)
+    - cron: '17 3 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub web or mobile app
 
 jobs:
@@ -46,10 +46,12 @@ jobs:
           python scripts/generate_excel_tracker.py
 
       - name: Verify Liveness & Capture Screenshots (Playwright)
+        continue-on-error: true
         run: |
           node scripts/verify_all_unapplied.mjs
 
       - name: Sync 8 Sheets to Live Google Sheets
+        continue-on-error: true
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
           GOOGLE_SHEET_URL: ${{ secrets.GOOGLE_SHEET_URL }}
@@ -57,6 +59,7 @@ jobs:
           python scripts/sync_to_google_sheets.py
 
       - name: Send Daily Job Radar to Telegram
+        if: always()
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

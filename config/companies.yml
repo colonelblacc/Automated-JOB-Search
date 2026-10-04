@@ -932,31 +932,41 @@ companies:
 - name: Mistral Solutions
   category: embedded_systems
   ats: custom
-  careers_url: https://www.mistralsolutions.com/careers
+  careers_url: https://mistralsolutions.com/career/careers-job-listings/
   india_locations:
   - Bangalore
   - Hyderabad
   - Delhi
   kerala: false
   entry_level_titles:
+  - Embedded Software - Trainee Engineer
+  - Embedded Hardware (Digital) - Senior Engineer / Module Lead
+  - Embedded Hardware (FPGA) - Senior Engineer / Module Lead
+  - Embedded Software (Technical Assistant – ENSAT) - Trainee Engineer
   - Embedded Software Engineer
   - Hardware Design Engineer
-  - DSP Engineer Trainee
   keywords:
+  - Mistral Solutions
+  - Axiscades
   - Defense Electronics
+  - Aerospace
   - Radar
+  - mmWave Radar
   - Board Bring-up
   - Embedded Linux
   - FPGA
   - DSP
   - SOM
+  - CAN FD
+  - Multi-layer PCB
+  - Hardware Design
   priority: HIGH
   source:
-    type: career_page
+    type: custom
     automated: false
-    status: MANUAL
-    note: Direct Website / Requires Board or Browser Probe
-    last_verified: '2026-10-02'
+    status: APPLIED
+    note: Direct Google Form + WordPress Portal (JID-028 & JID-009)
+    last_verified: '2026-10-04'
 - name: eInfochips (Arrow Electronics)
   category: embedded_systems
   ats: custom
@@ -2088,20 +2098,29 @@ companies:
   - Embedded Edge AI/ML Engineer
   - Embedded Linux Trainee
   keywords:
+  - TOSIL Systems
+  - Murugappa Group
+  - CG Power
   - Firmware
   - Edge AI
+  - TinyML
+  - FreeRTOS
+  - ARM Cortex
+  - STM32
+  - ESP32
   - Embedded Linux
   - Microcontrollers
   - IoT
   - Technopark
   - Infopark
+  - KINFRA
   priority: HIGH
   source:
     type: career_page
     automated: false
-    status: MANUAL
-    note: Direct Website / Requires Board or Browser Probe
-    last_verified: '2026-10-02'
+    status: APPLIED
+    note: Murugappa Group / CG Power semiconductor & embedded engineering subsidiary (Technopark / KINFRA Kochi)
+    last_verified: '2026-10-04'
 - name: SFO Technologies (NeST Group)
   category: kerala_regional
   ats: custom

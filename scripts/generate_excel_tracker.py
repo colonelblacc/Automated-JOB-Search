@@ -637,7 +637,9 @@ def build_workbook():
         "bytebeam", "galaxeye space", "galaxeye", "park controls & communications", 
         "park controls", "tessolve", "blackfig technologies", "blackfig tech", 
         "statiq", "artpark (iisc bangalore)", "artpark", "arys garage", "breakout", 
-        "south indian bank", "larsen & toubro (l&t)", "l&t"
+        "south indian bank", "larsen & toubro (l&t)", "l&t",
+        "tcs", "tata consultancy services", "emsyne", "emsyne technologies",
+        "tosil systems", "tosil", "mistral solutions", "mistral"
     }
 
     # Filter out any role where the company was already applied to
@@ -760,7 +762,11 @@ def build_workbook():
         ["APP-2026-017", "JOB-ARYS-017", "Arys Garage", "Embedded Hardware Intern (EV Electronics)", "Automotive Embedded", "2026-09-20", "APPLIED", "Application Submitted", "2026-09-29", "2026-10-09", "https://wellfound.com/jobs/3233894-embedded-hardware-intern-ev-electronics", "ArysGarage/", "EV electronics, STM32, KiCad (2-layer, 0 DRC/ERC), CAN bus, BMS/VCU, bench bring-up."],
         ["APP-2026-018", "JOB-BRK-018", "Breakout", "Embedded Product Development Internship", "IoT", "2026-09-20", "APPLIED", "Application Submitted", "2026-09-29", "2026-10-09", "https://www.linkedin.com/jobs/view/4465372345/", "Breakout/", "Bengaluru (Koramangala). Interactive smart hardware, ESP32/STM32, FreeRTOS, capacitive touch."],
         ["APP-2026-019", "JOB-SIB-019", "South Indian Bank", "Probationary Officer (Campus Recruitment 2027-28)", "Test/Debug", "2026-09-20", "APPLIED", "Campus Placement", "2026-10-01", "2026-10-15", "https://www.southindianbank.com/careers", "SouthIndianBank/", "Officer Scale I cadre. Tailored CV emphasizing analytical rigor, Python, IEEE Chair & UN Millennium Fellow."],
-        ["APP-2026-020", "JOB-LT-020", "Larsen & Toubro (L&T)", "Graduate Engineering Trainee (GET)", "Hardware Design", "2026-09-20", "APPLIED", "Campus Placement", "2026-10-01", "2026-10-15", "https://www.larsentoubro.com/corporate/careers/", "Larsen Tourbo/", "Office CTC ₹6.0L–7.5L / Site CTC ₹6.5L–8.1L. Nil bond. Tailored resume with STM32 custom dev board & LoRa."]
+        ["APP-2026-020", "JOB-LT-020", "Larsen & Toubro (L&T)", "Graduate Engineering Trainee (GET)", "Hardware Design", "2026-09-20", "APPLIED", "Campus Placement", "2026-10-01", "2026-10-15", "https://www.larsentoubro.com/corporate/careers/", "Larsen Tourbo/", "Office CTC ₹6.0L–7.5L / Site CTC ₹6.5L–8.1L. Nil bond. Tailored resume with STM32 custom dev board & LoRa."],
+        ["APP-2026-021", "JOB-TCS-021", "TCS", "Associate Researcher / Systems Engineer — AI Circuits & Edge AI Hardware", "Edge AI", "2026-10-03", "APPLIED", "Application Submitted", "2026-10-03", "2026-10-13", "https://www.tcs.com/research/careers", "TCS/", "Edge AI accelerators, Neuromorphic SNNs, Verilog HDL / FPGA DSD, TinyML, and IEEE CAS leadership."],
+        ["APP-2026-022", "JOB-EMSY-022", "Emsyne", "Forward Deployed Engineer (Elite Graduate Program)", "Edge AI", "2026-10-03", "APPLIED", "Campus Placement Drive", "2026-10-03", "2026-10-13", "https://www.emsyne.com", "Emsyne/", "Model Engineering College placement drive (Slot C2). ₹25k/mo internship to PPO up to 7 LPA. Applied AI, Python/C++, LLMs, FastAPI."],
+        ["APP-2026-023", "JOB-TOS-023", "TOSIL Systems", "Embedded Edge AI & Firmware Engineer", "Firmware", "2026-10-03", "APPLIED", "Application Submitted", "2026-10-03", "2026-10-13", "https://www.tosil-systems.com/careers", "TosilSystems/", "Technopark Trivandrum / KINFRA Kochi. Semiconductor & embedded systems specialist under Murugappa Group. TinyML, FreeRTOS, ARM Cortex/STM32."],
+        ["APP-2026-024", "JOB-MIST-024", "Mistral Solutions", "Embedded Software & Hardware Engineer", "Hardware Design", "2026-10-04", "APPLIED", "Application Submitted", "2026-10-04", "2026-10-14", "https://mistralsolutions.com/career/careers-job-listings/", "MistralSolutions/", "Bengaluru. Axiscades defense and aerospace embedded engineering subsidiary. JID-028 (Validation/Firmware) and JID-009 (Hardware Digital) applied."]
     ]
 
     for app in ground_truth_apps:
