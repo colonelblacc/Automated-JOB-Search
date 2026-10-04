@@ -72,7 +72,7 @@ p21 = paras[21]
 set_run(p21.runs[0], "Automotive BLE-to-CAN Hardware Gateway")
 set_run(p21.runs[1], "")
 set_run(p21.runs[2], "")
-set_run(p21.runs[3], "\t\tTeam ")
+set_run(p21.runs[3], "\tTeam ")
 set_run(p21.runs[4], "S")
 set_run(p21.runs[5], "ize")
 set_run(p21.runs[6], ":")
@@ -82,7 +82,7 @@ set_run(p21.runs[8], "1")
 p22 = paras[22]
 set_run(p22.runs[0], "Hardware Design Engineer")
 p22.runs[0].bold = True
-set_run(p22.runs[1], "\t\t")
+set_run(p22.runs[1], "\t")
 set_run(p22.runs[2], "2weeks")
 p22.runs[2].italic = True
 
@@ -153,8 +153,8 @@ clear_runs_from(p29, 1)
 # ------ PROJECT SLOT 3: Adaptive LED Shadow Mapping ------
 p30 = paras[30]
 set_run(p30.runs[0], "Adaptive LED Shadow Mapping")
-set_run(p30.runs[1], "")
-set_run(p30.runs[2], "\t\tTeam Size")
+set_run(p30.runs[1], "\t")
+set_run(p30.runs[2], "\tTeam Size")
 set_run(p30.runs[3], ":")
 set_run(p30.runs[4], " ")
 set_run(p30.runs[5], "3")
@@ -163,7 +163,7 @@ p31 = paras[31]
 set_run(p31.runs[0], "Computer Vision Lead")
 p31.runs[0].bold = True
 set_run(p31.runs[1], "\t")
-set_run(p31.runs[2], "\t")
+set_run(p31.runs[2], "")
 set_run(p31.runs[3], "1")
 set_run(p31.runs[4], "week")
 p31.runs[3].italic = True
