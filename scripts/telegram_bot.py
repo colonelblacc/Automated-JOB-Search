@@ -166,7 +166,37 @@ def run_bot_polling():
             time.sleep(3)
         time.sleep(1)
 
+import threading
+from http.server import HTTPServer, BaseHTTPRequestHandler
+
+class HealthCheckHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json")
+        self.end_headers()
+        response = json.dumps({
+            "status": "healthy",
+            "service": "telegram-job-bot",
+            "timestamp": datetime.now().isoformat()
+        }).encode("utf-8")
+        self.wfile.write(response)
+
+    def log_message(self, format, *args):
+        # Suppress noisy health-check access logs
+        pass
+
+def start_health_server():
+    port = int(os.environ.get("PORT", 10000))
+    server = HTTPServer(("0.0.0.0", port), HealthCheckHandler)
+    print(f"🌐 Health check HTTP server active on port {port} (Render Web Service ready)")
+    server.serve_forever()
+
 if __name__ == "__main__":
+    # Start HTTP server on background thread if running as a web service
+    if "PORT" in os.environ:
+        t = threading.Thread(target=start_health_server, daemon=True)
+        t.start()
+
     if len(sys.argv) > 1 and sys.argv[1] == "--single-poll":
         # Process pending updates once and exit
         updates = api_call("getUpdates", {"timeout": 5})
@@ -175,3 +205,4 @@ if __name__ == "__main__":
                 process_update(u)
     else:
         run_bot_polling()
+
