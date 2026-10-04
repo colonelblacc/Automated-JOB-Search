@@ -110,10 +110,20 @@ CANDIDATE_SKILLS = {
     "learning": ["freertos", "embedded linux", "yocto", "autosar", "aurix", "ros", "ros2"]
 }
 
-ENTRY_LEVEL_MARKERS = [
-    "graduate", "trainee", "entry level", "entry-level", "associate", 
-    "fresher", "intern", "campus", "0-1", "0-2", "mts 1", "mts i", 
-    "engineer 1", "engineer i", "junior", "0 to 1", "0 to 2", "0-3"
+INTERNSHIP_MARKERS = [
+    "intern", "internship", "student trainee", "summer intern", "6-month", 
+    "co-op", "trainee intern", "project trainee", "r&d intern", "engineering intern",
+    "firmware intern", "embedded intern", "hardware intern"
+]
+
+TRAINEE_MARKERS = [
+    "graduate trainee", "young graduate trainee", "get", "graduate engineer trainee",
+    "associate engineer", "trainee", "fresher", "campus", "mts 1", "mts i",
+    "engineer 1", "engineer i", "0-1", "0 to 1", "systems trainee"
+]
+
+ENTRY_LEVEL_MARKERS = INTERNSHIP_MARKERS + TRAINEE_MARKERS + [
+    "graduate", "entry level", "entry-level", "junior", "0-2", "0 to 2", "0-3"
 ]
 
 HARD_SENIOR_BLOCKERS = [
@@ -175,9 +185,9 @@ def detect_work_mode(text: str) -> str:
 
 def detect_job_type(title: str, text: str) -> str:
     t_lower = f"{title} {text}".lower()
-    if "intern" in t_lower:
+    if any(m in t_lower for m in INTERNSHIP_MARKERS) or "intern" in t_lower:
         return "Internship"
-    elif "graduate trainee" in t_lower or "young graduate" in t_lower or "get" in t_lower:
+    elif any(m in t_lower for m in TRAINEE_MARKERS) or "trainee" in t_lower or "get" in t_lower:
         return "Graduate Program / Trainee"
     elif "contract" in t_lower or "fixed term" in t_lower:
         return "Contract"
@@ -285,9 +295,17 @@ def evaluate_job(job: Dict[str, Any]) -> Dict[str, Any]:
     if any(deg in full_text for deg in ECE_DEGREES):
         why_fit.append("ECE / Electronics degree accepted")
 
-    # Experience fit
-    is_explicit_entry = any(m in full_text for m in ENTRY_LEVEL_MARKERS)
-    if is_explicit_entry:
+    # Priority Role Detection (Priority 1: Internships, Priority 2: Trainee/GET, Priority 3: Full-time)
+    title_lower = title.lower()
+    is_internship = any(m in full_text for m in INTERNSHIP_MARKERS) or "intern" in title_lower
+    is_trainee = (any(m in full_text for m in TRAINEE_MARKERS) or "trainee" in title_lower or "get" in title_lower) and not is_internship
+    is_explicit_entry = is_internship or is_trainee or any(m in full_text for m in ENTRY_LEVEL_MARKERS)
+
+    if is_internship:
+        why_fit.append("🎯 Priority 1: Internship (Highest conversion & fastest turnaround)")
+    elif is_trainee:
+        why_fit.append("🎯 Priority 2: Graduate / Trainee role (Structured entry-level)")
+    elif is_explicit_entry:
         why_fit.append("0-2 Years / Graduate friendly")
 
     # Location fit
@@ -303,18 +321,21 @@ def evaluate_job(job: Dict[str, Any]) -> Dict[str, Any]:
     score = 0.0
     
     # Role alignment (30 pts)
-    title_lower = title.lower()
     if any(t in title_lower for t in ["embedded", "firmware", "hardware", "mcu", "fpga", "vlsi", "robotics", "avionics"]):
         score += 30.0
-    elif any(t in title_lower for t in ["engineer", "developer", "trainee", "associate"]):
+    elif any(t in title_lower for t in ["engineer", "developer", "trainee", "associate", "intern"]):
         score += 20.0
         
     # Technical depth across families (30 pts)
     # 5 pts per active matched family (max 30)
     score += min(30.0, len(matched_families) * 6.0)
     
-    # Experience fit (20 pts)
-    if is_explicit_entry:
+    # Experience fit (20 pts) + Priority Role Bonus (Internships +10 pts, Trainee +5 pts)
+    if is_internship:
+        score += 20.0 + 10.0  # Priority 1: Full exp fit + 10 pt internship bonus
+    elif is_trainee:
+        score += 20.0 + 5.0   # Priority 2: Full exp fit + 5 pt trainee/GET bonus
+    elif is_explicit_entry:
         score += 20.0
     else:
         score += 12.0
@@ -336,10 +357,16 @@ def evaluate_job(job: Dict[str, Any]) -> Dict[str, Any]:
 
     score = max(20, min(99, round(score)))
 
-    # 4. Match Level & Recommended Action
+    # 4. Match Level & Recommended Action (Internships prioritized with lower friction threshold)
     role_family = detect_role_family(title, desc)
     
-    if score >= 82 and is_explicit_entry:
+    if is_internship and score >= 75:
+        match_level = "HIGH"
+        action = "APPLY"
+    elif is_trainee and score >= 80:
+        match_level = "HIGH"
+        action = "APPLY"
+    elif score >= 82 and is_explicit_entry:
         match_level = "HIGH"
         action = "APPLY"
     elif score >= 70:
@@ -355,11 +382,16 @@ def evaluate_job(job: Dict[str, Any]) -> Dict[str, Any]:
     # Freshness
     days_open, freshness_badge = calculate_freshness(job.get("posted_date"), job.get("first_seen"))
 
+    priority_tier = 1 if is_internship else (2 if is_trainee else 3)
+    priority_label = "Priority 1 (Internship)" if is_internship else ("Priority 2 (Trainee/GET)" if is_trainee else "Priority 3 (Full-time)")
+
     return {
         "eligible": True,
         "eligibility_status": "ELIGIBLE",
         "eligibility_reason": "Meets 0-2 yrs ECE / Hardware qualification criteria",
         "role_family": role_family,
+        "priority_tier": priority_tier,
+        "priority_label": priority_label,
         "relevance_score": score,
         "match_level": match_level,
         "recommended_action": action,

@@ -231,10 +231,10 @@ def build_workbook():
     kpi_cards = [
         ("NEW RADAR JOBS", '=COUNTIF(K6:K100, "🟢*")', "B", "C"),
         ("HIGH RELEVANCE", '=COUNTIF(U6:U100, "HIGH")', "E", "F"),
-        ("APPLICATIONS ACTIVE", '=COUNTIF(APPLICATIONS!G2:G50, "APPLIED") + COUNTIF(APPLICATIONS!G2:G50, "TO APPLY") + COUNTIF(APPLICATIONS!G2:G50, "OA RECEIVED")', "H", "I"),
-        ("OPEN ACTION NEEDED", '=COUNTIF(APPLICATIONS!G2:G50, "TO APPLY")', "K", "L"),
-        ("COMPANIES MONITORED", '=COUNTIF(\'COMPANY WATCHLIST\'!B2:B200, "YES")', "N", "O"),
-        ("AUTOMATED FEEDS", '=COUNTIF(\'COMPANY WATCHLIST\'!H2:H200, "AUTOMATED") + COUNTIF(\'COMPANY WATCHLIST\'!H2:H200, "VERIFIED")', "Q", "R"),
+        ("INTERNSHIPS (P1)", '=COUNTIF(O6:O100, "*Intern*")', "H", "I"),
+        ("APPLICATIONS ACTIVE", '=COUNTIF(APPLICATIONS!G2:G50, "APPLIED") + COUNTIF(APPLICATIONS!G2:G50, "TO APPLY") + COUNTIF(APPLICATIONS!G2:G50, "OA RECEIVED")', "K", "L"),
+        ("OPEN ACTION NEEDED", '=COUNTIF(APPLICATIONS!G2:G50, "TO APPLY")', "N", "O"),
+        ("COMPANIES MONITORED", '=COUNTIF(\'COMPANY WATCHLIST\'!B2:B200, "YES")', "Q", "R"),
         ("HEALTHY SOURCES", '=COUNTIF(\'SOURCE HEALTH\'!K2:K200, "HEALTHY")', "T", "U")
     ]
 
@@ -278,6 +278,70 @@ def build_workbook():
     # Fresh High-Value Unapplied Openings (Authoritative ATS / Career Portals)
     # STRICT RULE: Once a job is applied to, it moves to APPLICATIONS and is excluded from NEW JOBS.
     active_jobs = [
+        {
+            "posted": "2026-10-02",
+            "seen": today_str,
+            "freshness": "🟢 Fresh (1d)",
+            "days_open": 1,
+            "verified": today_str,
+            "status": "OPEN",
+            "id": "JOB-STM-001",
+            "canonical_id": "stmicro_fw_intern",
+            "title": "Embedded Firmware & MCU Engineering Intern",
+            "role_family": "Firmware",
+            "company": "STMicroelectronics",
+            "category": "Semiconductor",
+            "location": "Greater Noida / Bangalore",
+            "work_mode": "Hybrid",
+            "job_type": "Internship",
+            "exp": "0 yrs (Student / Intern)",
+            "salary": "Disclosed (₹35,000–₹45,000/mo)",
+            "eligibility": "ELIGIBLE",
+            "eligibility_reason": "B.Tech ECE candidate with custom STM32 board and Embedded C match",
+            "score": 95,
+            "level": "HIGH",
+            "action": "APPLY",
+            "why_fit": "🎯 Priority 1: Internship; STM32, Embedded C, FreeRTOS, Lab Bring-up, ECE 2027",
+            "gaps": "MEMS sensor calibration",
+            "source": "STMicro Career Portal",
+            "source_type": "CAREER PAGE",
+            "ats": "Custom",
+            "discovery_sources": "STMicro Portal; LinkedIn; Glassdoor",
+            "job_url": "https://www.st.com/content/st_com/en/careers.html",
+            "comp_url": "https://st.com"
+        },
+        {
+            "posted": "2026-10-01",
+            "seen": today_str,
+            "freshness": "🟢 Fresh (2d)",
+            "days_open": 2,
+            "verified": today_str,
+            "status": "OPEN",
+            "id": "JOB-ADI-002",
+            "canonical_id": "adi_hw_intern",
+            "title": "Hardware & Embedded Systems Engineering Intern",
+            "role_family": "Board Bring-up",
+            "company": "Analog Devices",
+            "category": "Semiconductor",
+            "location": "Bangalore",
+            "work_mode": "On-site",
+            "job_type": "Internship",
+            "exp": "0 yrs (Student / Intern)",
+            "salary": "Disclosed (₹40,000–₹50,000/mo)",
+            "eligibility": "ELIGIBLE",
+            "eligibility_reason": "ECE candidate with circuit bring-up, SPI/I2C/UART & DSO/Logic Analyzer match",
+            "score": 94,
+            "level": "HIGH",
+            "action": "APPLY",
+            "why_fit": "🎯 Priority 1: Internship; Mixed-Signal Hardware, DSO, Logic Analyzer, KiCad, ECE",
+            "gaps": "High-speed differential RF layout",
+            "source": "Workday REST Search",
+            "source_type": "ATS API",
+            "ats": "Workday",
+            "discovery_sources": "Workday; LinkedIn; Indeed",
+            "job_url": "https://analogdevices.wd1.myworkdayjobs.com/External",
+            "comp_url": "https://analog.com"
+        },
         {
             "posted": "2026-09-29",
             "seen": today_str,
@@ -522,6 +586,18 @@ def build_workbook():
         job for job in active_jobs 
         if job["company"].strip().lower() not in applied_company_set
     ]
+
+    def get_job_priority_tier(job):
+        title = (job.get("title") or "").lower()
+        jtype = (job.get("job_type") or "").lower()
+        if "intern" in title or "intern" in jtype:
+            return 1  # Priority 1: Internships (Highest)
+        elif any(k in title or k in jtype for k in ["trainee", "graduate", "get"]):
+            return 2  # Priority 2: Graduate / Trainee Programs
+        return 3      # Priority 3: Full-time Entry-Level
+
+    # Mandatory Invariant: Always give first priority to internships over full-time and trainee positions
+    unapplied_active_jobs.sort(key=lambda j: (get_job_priority_tier(j), -j.get("score", 0)))
 
     for job in unapplied_active_jobs:
         # Determine canonical fields
