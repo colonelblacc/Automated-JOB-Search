@@ -198,13 +198,15 @@ companies:
     last_verified: '2026-10-05'
 - name: Texas Instruments
   category: semiconductor
-  ats: workday
-  careers_url: https://ti.wd1.myworkdayjobs.com/TI_Careers
+  ats: oracle_cx
+  careers_url: https://careers.ti.com/en/sites/CX
   india_locations:
   - Bangalore
   kerala: false
   entry_level_titles:
+  - Embedded Software Engineer
   - Software Engineer
+  - Digital Engineer
   - Applications Engineer
   - Design Engineer
   - Analog Design Trainee
@@ -218,11 +220,11 @@ companies:
   - Power Management
   priority: HIGH
   source:
-    type: ats
+    type: career_page
     automated: true
     status: AUTOMATED
-    note: Workday REST Search
-    last_verified: '2026-10-02'
+    note: Oracle Cloud Recruiting (CX)
+    last_verified: '2026-10-05'
 - name: Infineon Technologies
   category: semiconductor
   ats: custom
