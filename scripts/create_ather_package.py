@@ -52,6 +52,13 @@ p5 = paras[5]
 set_run(p5.runs[4], "Electric Vehicle Systems, Automotive Telematics, CAN FD, Embedded Firmware, Power Electronics")
 clear_runs_from(p5, 5)
 
+# P9 & P11: Clean percentages (90% and 93%)
+p9 = paras[9]
+set_run(p9.runs[6], "90%")
+
+p11 = paras[11]
+set_run(p11.runs[4], "93%")
+
 # P16: ICFOSS Technologies Used
 p16 = paras[16]
 set_run(p16.runs[1], "Embedded C, FreeRTOS, ESP32-S3, Hardware Abstraction Layers (HAL), Capacitive Sensing, Signal Integrity, DSO")
@@ -62,7 +69,7 @@ p17 = paras[17]
 new_icfoss_desc = (
     "Engineered real-time embedded firmware in C for assistive hardware on ESP32-S3 microcontrollers under FreeRTOS. "
     "Implemented hardware abstraction layers (HAL), low-latency capacitive sensing, and deterministic state-machine logic. "
-    "Debugged peripheral bus timing and signal integrity using digital storage oscilloscopes and logic analyzers.\t"
+    "Debugged peripheral bus timing and signal integrity using a digital storage oscilloscope (DSO) and logic analyzer.\t"
 )
 set_run(p17.runs[0], new_icfoss_desc)
 clear_runs_from(p17, 1)
@@ -87,7 +94,7 @@ set_run(p22.runs[2], "2weeks")
 p22.runs[2].italic = True
 
 p23 = paras[23]
-hw_gw_tech = "KiCad 10.0 (4-Layer), TI CC2340 BLE 5.3, TI TCAN4550-Q1 CAN FD, ISO 7637-2, DFMEA, Power Rails"
+hw_gw_tech = "KiCad (4-Layer PCB), TI CC2340 (BLE 5.3), TI TCAN4550-Q1 (CAN FD), ISO 7637-2, DFMEA"
 set_run(p23.runs[0], "Technologies Used")
 p23.runs[0].bold = True
 p23.runs[0].italic = True
@@ -103,9 +110,9 @@ clear_runs_from(p23, 4)
 
 p24 = paras[24]
 set_run(p24.runs[0],
-    "Architected an automotive 4-layer (ENIG, 50Ω CPWG, 90Ω diff) BLE 5.3 to CAN FD gateway (9–36V ISO 7637-2). "
-    "Engineered multi-rail power with LM5164 buck, P-FET reverse clamp, and TPS2116 <2µs battery failover. "
-    "Conducted AIAG/VDA DFMEA and released Gerbers + BOM (73 items, 109 components) with 0 DRC/ERC violations."
+    "Architected an automotive telematics gateway bridging BLE 5.3 with high-speed CAN FD on a 4-layer PCB. "
+    "Engineered vehicle power conditioning with buck regulation and seamless battery backup failover. "
+    "Generated production-ready Gerbers and BOM (73 line items, 109 components) with 0 DRC violations and 0 ERC violations."
 )
 clear_runs_from(p24, 1)
 
@@ -130,7 +137,7 @@ set_run(p27.runs[3], "2weeks")
 p27.runs[3].italic = True
 
 p28 = paras[28]
-stm_tech = "KiCad (2-Layer), STM32F401RE, CAN Transceiver, FreeRTOS, SPI, I2C, UART, SWD/JTAG"
+stm_tech = "KiCad (2-Layer), STM32F401RE (ARM Cortex-M4), 3.3V LDO, FreeRTOS, SPI, I2C, UART, SWD"
 set_run(p28.runs[0], "Technologies Use")
 p28.runs[0].bold = True
 p28.runs[0].italic = True
@@ -145,8 +152,8 @@ p28.runs[3].italic = True
 
 p29 = paras[29]
 set_run(p29.runs[0],
-    "Designed a 2-layer KiCad board with STM32F401RE, CAN transceiver, and crystal routing (0 DRC/ERC). "
-    "Brought up bare-metal with FreeRTOS; validated SPI, I2C, UART using DSO and logic analyzer."
+    "Designed and laid out a 2-layer STM32F401RE development board in KiCad with LDO regulation and crystal clock routing. "
+    "Brought up bare-metal firmware with FreeRTOS; validated SPI, I2C, and UART bus signals using a digital storage oscilloscope (DSO) and logic analyzer."
 )
 clear_runs_from(p29, 1)
 
@@ -160,7 +167,7 @@ set_run(p30.runs[4], " ")
 set_run(p30.runs[5], "3")
 
 p31 = paras[31]
-set_run(p31.runs[0], "Computer Vision Lead")
+set_run(p31.runs[0], "Embedded Vision Engineer")
 p31.runs[0].bold = True
 set_run(p31.runs[1], "\t")
 set_run(p31.runs[2], "")
@@ -168,9 +175,10 @@ set_run(p31.runs[3], "1")
 set_run(p31.runs[4], "week")
 p31.runs[3].italic = True
 p31.runs[4].italic = True
+p31.runs[4].italic = True
 
 p32 = paras[32]
-led_tech = "Python, YOLOv8, OpenCV, PyTorch, Raspberry Pi 5, WS2812B Addressable LED Strip, Edge Deployment"
+led_tech = "Python, YOLOv8, OpenCV, PyTorch, Raspberry Pi 5, WS2812B Addressable LED Strip"
 set_run(p32.runs[0], "Technologies Use")
 p32.runs[0].bold = True
 p32.runs[0].italic = True
@@ -185,8 +193,9 @@ p32.runs[3].italic = True
 
 p33 = paras[33]
 set_run(p33.runs[0],
-    "Developed an adaptive night-time vehicle detection and LED shadow mapping system with low-light camera feeds. "
-    "Deployed quantized YOLOv8 to track vehicles and dynamically blackout glare sectors in real time."
+    "Developed an intelligent anti-glare vehicle headlamp system using real-time computer vision on a Raspberry Pi 5. "
+    "Deployed a quantized YOLOv8 model to detect oncoming vehicles and dynamically blackout individual LED sectors "
+    "to prevent headlight glare while illuminating the road."
 )
 clear_runs_from(p33, 1)
 
@@ -210,9 +219,10 @@ p35.runs[2].italic = True
 clear_runs_from(p35, 3)
 
 p36 = paras[36]
-ls_tech = "ESP-32, LoRa Module (Ra-02 433 MHz), Embedded C, Sensor Fusion, Anomaly Detection, Low-Power RF"
+ls_tech = "ESP-32, LoRa (Ra-02 433 MHz), Embedded C, Accelerometer, Soil Moisture Sensor, Low-Power RF"
 ls_desc = (
-    "Designed an IoT sensing node performing multi-sensor fusion and threshold anomaly detection in C, cross-verifying telemetry over a 433 MHz LoRa mesh for real-time alerting."
+    "Designed an off-grid IoT sensing node in embedded C performing sensor fusion across accelerometer and moisture inputs. "
+    "Cross-verifies emergency threat levels with nearby nodes over a peer-to-peer LoRa mesh to broadcast early warnings."
 )
 set_run(p36.runs[1], ls_tech)
 set_run(p36.runs[2], ".                                                                ")
@@ -316,7 +326,7 @@ WHY AJITH SHAJAN IS AN EXCEPTIONAL FIT (95%+ MATCH):
    - Multi-rail power regulation (LM5164 buck) and TI TPS2116 <2µs battery failover.
    - AIAG/VDA DFMEA completed with 0 DRC/ERC violations. Direct match for Ather's vehicle telematics!
 2. Custom STM32 Microcontroller Board:
-   - 2-layer KiCad board with STM32F401RE (ARM Cortex-M4 @ 84 MHz), CAN transceiver, and FreeRTOS bring-up.
+   - 2-layer KiCad development board with STM32F401RE (ARM Cortex-M4 @ 84 MHz), 3.3V LDO power regulation, and FreeRTOS bring-up.
 3. ICFOSS Embedded Firmware Internship:
    - Real-time embedded C on ESP32-S3 under FreeRTOS, capacitive touch sensing, and bench DSO verification.
 4. Adaptive LED Shadow Mapping:
