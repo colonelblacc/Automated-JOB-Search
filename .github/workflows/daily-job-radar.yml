@@ -41,6 +41,11 @@ jobs:
         run: |
           python scripts/relevance_engine.py
 
+      - name: Scan Embedded.jobs Live Radar
+        continue-on-error: true
+        run: |
+          python scripts/scan_embedded_jobs.py
+
       - name: Generate 8-Tab Local Excel Tracker
         run: |
           python scripts/generate_excel_tracker.py

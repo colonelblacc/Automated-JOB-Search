@@ -57,6 +57,13 @@ def run_scan(mock_network: bool = False):
     print("  7. Hardware / FPGA / VLSI (Siemens EDA, InSemi, MosChip, CoreEL, Achronix...)")
     print("  8. Aerospace & Defense (BEL, HAL, DRDO, TASL, L&T Defence, Data Patterns, Pixxel...)")
 
+    print("\n--- [Search C: Embedded.jobs Specialized Pipeline Sweep] ---")
+    try:
+        from scan_embedded_jobs import run_embedded_jobs_scan
+        run_embedded_jobs_scan()
+    except Exception as e:
+        print(f"⚠️ Note on embedded.jobs scan: {e}")
+
     # Re-generate / update Excel workbook with fresh data and logs
     print("\n📊 Updating Excel Workbook: AI_Embedded_Job_Hunt.xlsx...")
     build_workbook()

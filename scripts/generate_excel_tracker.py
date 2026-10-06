@@ -18,6 +18,7 @@ Architecture:
 import os
 import sys
 import yaml
+import json
 from datetime import datetime, date
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
@@ -836,6 +837,20 @@ def build_workbook():
         "tcs", "tata consultancy services", "emsyne", "emsyne technologies",
         "tosil systems", "tosil", "mistral solutions", "mistral"
     }
+
+    # Merge jobs dynamically discovered by scan_embedded_jobs.py if cache exists
+    embedded_cache_path = os.path.join(WORKSPACE_DIR, "data", "embedded_jobs_cache.json")
+    if os.path.exists(embedded_cache_path):
+        try:
+            with open(embedded_cache_path, "r", encoding="utf-8") as f:
+                cached_emb_jobs = json.load(f)
+            existing_canon_ids = {j.get("canonical_id") for j in active_jobs}
+            for cjob in cached_emb_jobs:
+                if cjob.get("canonical_id") not in existing_canon_ids:
+                    active_jobs.append(cjob)
+                    existing_canon_ids.add(cjob.get("canonical_id"))
+        except Exception as e:
+            print(f"Note: error reading embedded_jobs_cache: {e}")
 
     # Filter out any role where the company was already applied to
     unapplied_active_jobs = [
