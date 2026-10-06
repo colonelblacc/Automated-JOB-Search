@@ -29,19 +29,19 @@ def set_run(run, text): run.text = text
 def clear_runs_from(para, start_idx):
     for r in para.runs[start_idx:]: r.text = ""
 
-# PARA 1 - Technical Skills line 1 (VLSI, RTL & Digital Hardware biased, 95 chars)
+# PARA 1 - Technical Skills line 1 (94 chars)
 p1 = paras[1]
-set_run(p1.runs[4], "Verilog HDL, Digital System Design (DSD), FPGA Synthesis, STM32 (ARM Cortex-M4), KiCad PCB Layout")
+set_run(p1.runs[4], "Verilog HDL, Digital System Design (DSD), RTL Synthesis, Static Timing Analysis, KiCad Layout")
 clear_runs_from(p1, 5)
 
-# PARA 2 - Technical Skills line 2 (Interfaces, Tools & Bring-Up, 98 chars)
+# PARA 2 - Technical Skills line 2 (98 chars)
 p2 = paras[2]
-set_run(p2.runs[0], "SPI, I2C, UART, CAN FD, Logic Analyzers, Digital Storage Oscilloscopes (DSOs), Vivado, ModelSim, EDA")
+set_run(p2.runs[0], "FSM Design, Clock Domain Crossing (CDC), Logic Analyzers, DSOs, ModelSim, Icarus Verilog, Vivado")
 clear_runs_from(p2, 1)
 
-# PARA 5 - Interests (VLSI & Digital focused, 96 chars)
+# PARA 5 - Interests (80 chars)
 p5 = paras[5]
-set_run(p5.runs[4], "VLSI Design, ASIC / FPGA RTL Design, Digital Hardware Architecture, Silicon Bring-Up, Embedded Systems")
+set_run(p5.runs[4], "VLSI Design, ASIC / FPGA RTL Architecture, Silicon Validation, Embedded Systems")
 clear_runs_from(p5, 5)
 
 # PARA 9 - Education CBSE 12th percentage
@@ -52,36 +52,36 @@ set_run(p9.runs[6], "90%")
 p11 = paras[11]
 set_run(p11.runs[4], "93%")
 
-# PARA 16 - ICFOSS Tech Used (102 chars)
+# PARA 16 - ICFOSS Tech Used (88 chars)
 p16 = paras[16]
-set_run(p16.runs[1], "Embedded C, ESP32S3, PCB Design, Capacitive Touch Sensing, Digital Logic State Machines, Lab Bring-Up")
+set_run(p16.runs[1], "Embedded C, ESP32S3, PCB Design, Capacitive Sensing, Digital Logic FSMs, Lab Bring-Up")
 clear_runs_from(p16, 2)
 
 # PARA 17 - ICFOSS Description (3 lines calibrated)
 p17 = paras[17]
 set_run(p17.runs[0],
-    "Engineered real-time embedded firmware and digital sensor interfaces on ESP32S3 microcontrollers under FreeRTOS. "
+    "Engineered real-time embedded firmware and digital sensor interfaces on ESP32S3 under FreeRTOS. "
     "Designed capacitive touch sensing signal conditioning circuits and deterministic state-machine logic. "
-    "Debugged hardware-software interactions and signal integrity using digital storage oscilloscopes (DSOs) and logic analyzers.\t"
+    "Validated hardware-software timing and signal integrity using DSOs and logic analyzers.\t"
 )
 clear_runs_from(p17, 1)
 
-# ------ PROJECT SLOT 1: Automotive BLE-to-CAN Hardware Gateway ------
+# ------ PROJECT SLOT 1: Dual-Clock Asynchronous FIFO ------
 p21 = paras[21]
-set_run(p21.runs[0], "Automotive BLE-to-CAN Hardware Gateway")
+set_run(p21.runs[0], "Dual-Clock Asynchronous FIFO with Gray-Code Synchronization")
 set_run(p21.runs[1], "")
 set_run(p21.runs[2], " ")
 set_run(p21.runs[8], "1")
 
 p22 = paras[22]
-set_run(p22.runs[0], "Hardware Lead")
+set_run(p22.runs[0], "RTL Design Lead")
 set_run(p22.runs[1], "\t")
 set_run(p22.runs[2], "2weeks")
 p22.runs[0].bold = True
 p22.runs[2].italic = True
 
 p23 = paras[23]
-hw_gw_tech = "KiCad 10.0 (4-Layer PCB, ENIG), TCAN4550-Q1 (CAN FD), CC2340R5 (BLE 5.3), LM5164 Buck, TPS2116, TVS, DFMEA"
+fifo_tech = "Verilog HDL, Clock Domain Crossing (CDC), Gray Code, 2-FF Synchronizers, Icarus Verilog, GTKWave"
 set_run(p23.runs[0], "Technologies Used")
 p23.runs[0].bold = True
 p23.runs[0].italic = True
@@ -90,22 +90,22 @@ p23.runs[1].bold = True
 p23.runs[1].italic = True
 set_run(p23.runs[2], " ")
 p23.runs[2].italic = True
-set_run(p23.runs[3], hw_gw_tech)
+set_run(p23.runs[3], fifo_tech)
 p23.runs[3].bold = False
 p23.runs[3].italic = True
 clear_runs_from(p23, 4)
 
 p24 = paras[24]
 set_run(p24.runs[0],
-    "Architected an automotive 4-layer (ENIG, 50\u03a9 CPWG, 90\u03a9 diff) BLE 5.3 to CAN FD gateway (9\u201336V ISO 7637-2). "
-    "Engineered multi-rail power with LM5164 buck, P-FET reverse clamp, and TPS2116 <2\u03bcs battery failover. "
-    "Generated production-ready Gerbers and BOM (73 line items, 109 components) with 0 DRC violations and 0 ERC violations."
+    "Designed a parameterized dual-clock FIFO in Verilog HDL to resolve clock domain crossing (CDC) across asynchronous clock domains. "
+    "Implemented 2-stage flip-flop synchronizers and binary-to-Gray converters to eliminate metastability. "
+    "Engineered wrap-around full/empty flag logic; verified via self-checking testbenches."
 )
 clear_runs_from(p24, 1)
 
-# ------ PROJECT SLOT 2: Custom STM32 Dev Board ------
+# ------ PROJECT SLOT 2: Configurable UART Controller Core ------
 p26 = paras[26]
-set_run(p26.runs[0], "Custom STM32 Development Board & Bench Bring-Up ")
+set_run(p26.runs[0], "Configurable UART Controller Core & Baud Rate Generator ")
 set_run(p26.runs[1], "\t")
 set_run(p26.runs[2], "\t")
 set_run(p26.runs[3], "Team ")
@@ -116,7 +116,7 @@ set_run(p26.runs[7], " ")
 set_run(p26.runs[8], "1")
 
 p27 = paras[27]
-set_run(p27.runs[0], "Hardware Designer")
+set_run(p27.runs[0], "Digital Design Engineer")
 p27.runs[0].bold = True
 set_run(p27.runs[1], "\t")
 set_run(p27.runs[2], "\t")
@@ -124,7 +124,7 @@ set_run(p27.runs[3], "2weeks")
 p27.runs[3].italic = True
 
 p28 = paras[28]
-stm_tech = "KiCad (2-Layer), STM32F401RE, 3.3V LDO, FreeRTOS, SPI, I2C, UART, SWD Debug"
+uart_tech = "Verilog HDL, FSM Design (Moore/Mealy), Baud Division, 16x Oversampling, RTL Simulation"
 set_run(p28.runs[0], "Technologies Use")
 p28.runs[0].bold = True
 p28.runs[0].italic = True
@@ -133,37 +133,37 @@ p28.runs[1].bold = True
 p28.runs[1].italic = True
 set_run(p28.runs[2], " ")
 p28.runs[2].italic = True
-set_run(p28.runs[3], stm_tech)
+set_run(p28.runs[3], uart_tech)
 p28.runs[3].bold = False
 p28.runs[3].italic = True
 
 p29 = paras[29]
 set_run(p29.runs[0],
-    "Designed and laid out a 2-layer STM32F401RE development board with LDO regulation and crystal routing (0 DRC/ERC). "
-    "Brought up bare-metal with FreeRTOS; validated SPI, I2C, UART using digital storage oscilloscope (DSO) and logic analyzer."
+    "Architected a modular UART core in Verilog HDL with Moore/Mealy FSMs for start, data, parity, and stop bit sequencing. "
+    "Implemented a parameterized baud divider with 16x receiver oversampling; validated framing error detection in simulation."
 )
 clear_runs_from(p29, 1)
 
-# ------ PROJECT SLOT 3: Edge AI Dynamic Braille (Interfacing & Digital Logic) ------
+# ------ PROJECT SLOT 3: Automotive BLE-to-CAN Hardware Gateway ------
 p30 = paras[30]
-set_run(p30.runs[0], "Edge AI based Dynamic Braille System")
+set_run(p30.runs[0], "Automotive BLE-to-CAN Hardware Gateway")
 set_run(p30.runs[1], "\t")
 set_run(p30.runs[2], "\tTeam Size")
 set_run(p30.runs[3], ":")
 set_run(p30.runs[4], " ")
-set_run(p30.runs[5], "4")
+set_run(p30.runs[5], "1")
 
 p31 = paras[31]
 set_run(p31.runs[0], "Hardware Lead")
 p31.runs[0].bold = True
 set_run(p31.runs[1], "\t")
 set_run(p31.runs[2], "\t")
-set_run(p31.runs[3], "1week")
+set_run(p31.runs[3], "2weeks")
 p31.runs[3].italic = True
 clear_runs_from(p31, 4)
 
 p32 = paras[32]
-braille_tech = "Raspberry Pi 5, Arduino, Python, Edge ML (Gemma 2B), PaddleOCR, SG90 Servos, UART, TinyML"
+can_tech = "KiCad 10.0 (4-Layer PCB), TCAN4550-Q1 (CAN FD), CC2340R5 (BLE 5.3), LM5164, TPS2116, ISO 7637-2, DFMEA"
 set_run(p32.runs[0], "Technologies Use")
 p32.runs[0].bold = True
 p32.runs[0].italic = True
@@ -172,38 +172,39 @@ p32.runs[1].bold = True
 p32.runs[1].italic = True
 set_run(p32.runs[2], " ")
 p32.runs[2].italic = True
-set_run(p32.runs[3], braille_tech)
+set_run(p32.runs[3], can_tech)
 p32.runs[3].bold = False
 p32.runs[3].italic = True
 
 p33 = paras[33]
 set_run(p33.runs[0],
-    "Architected hardware actuation interfacing Raspberry Pi 5 via UART to an ESP32 controlling servo arrays for tactile Braille output, integrating bilingual OCR and quantized on-device LLM."
+    "Architected an automotive 4-layer BLE 5.3 to CAN FD gateway with 9V\u201336V ISO 7637-2 power conditioning and TPS2116 failover. "
+    "Released production Gerbers and BOM with 0 DRC violations and 0 ERC violations."
 )
 clear_runs_from(p33, 1)
 
-# ------ PROJECT SLOT 4: Landslide Tracker ------
+# ------ PROJECT SLOT 4: Custom STM32 Development Board & Bench Bring-Up ------
 p34 = paras[34]
-set_run(p34.runs[0], "Landslide Tracker")
-set_run(p34.runs[1], " and Response ")
-set_run(p34.runs[2], "System")
+set_run(p34.runs[0], "Custom STM32 Development Board")
+set_run(p34.runs[1], " & Bench Bring-Up")
+set_run(p34.runs[2], "")
 
 p35 = paras[35]
 set_run(p35.runs[0], "Hardware Designer")
 p35.runs[0].bold = True
 set_run(p35.runs[1], "\t")
 set_run(p35.runs[2], "\t")
-set_run(p35.runs[3], "4days")
+set_run(p35.runs[3], "2weeks")
 p35.runs[3].italic = True
 
 p36 = paras[36]
-ls_tech = "ESP-32, LoRa Module (Ra-02 433 MHz), Embedded C, Sensor Fusion, Anomaly Detection, Low-Power RF"
-ls_desc = (
-    "Designed an IoT sensing node performing multi-sensor fusion and threshold anomaly detection in C, cross-verifying telemetry over a 433 MHz LoRa mesh for real-time alerting."
+stm_tech_4 = "KiCad (2-Layer), STM32F401RE (ARM Cortex-M4), 3.3V LDO, Crystal Routing, FreeRTOS, DSOs, Logic Analyzers"
+stm_desc_4 = (
+    "Designed a 2-layer STM32F401RE development board with crystal routing and LDO decoupling (0 DRC/ERC); validated bare-metal bus timings using digital storage oscilloscopes (DSOs)."
 )
-set_run(p36.runs[1], ls_tech)
+set_run(p36.runs[1], stm_tech_4)
 set_run(p36.runs[2], ".                                                                ")
-set_run(p36.runs[4], ls_desc)
+set_run(p36.runs[4], stm_desc_4)
 p36.runs[4].bold = False
 p36.runs[4].italic = False
 clear_runs_from(p36, 5)
@@ -260,106 +261,102 @@ if success:
     shutil.copy(OUTPUT_PDF, OUTPUT_PDF_STD)
     print(f"Copied to: {OUTPUT_PDF_STD}")
 
-    import fitz
-    doc_pdf = fitz.open(OUTPUT_PDF)
-    print(f"Verified PDF page count: {len(doc_pdf)}")
-    for i, page in enumerate(doc_pdf):
-        pix = page.get_pixmap(dpi=150)
-        png_path = os.path.join(HCL_DIR, f"page_{i+1}.png")
-        pix.save(png_path)
-        print(f"Rendered: {png_path}")
+# Verify 2 pages
+import fitz
+doc_pdf = fitz.open(OUTPUT_PDF)
+page_count = len(doc_pdf)
+print(f"Verified PDF page count: {page_count}")
 
-    p1 = doc_pdf[0]
-    p2 = doc_pdf[1]
-    blocks1 = p1.get_text("blocks")
-    blocks2 = p2.get_text("blocks")
-    meaningful1 = [b for b in blocks1 if b[4].strip()]
-    meaningful2 = [b for b in blocks2 if b[4].strip()]
-    p1_last_y = max(b[3] for b in meaningful1)
-    p2_first_y = min(b[1] for b in meaningful2)
-    print(f"\nPage 1 last content y: {p1_last_y:.2f} pt")
-    print(f"Page 2 first content y: {p2_first_y:.2f} pt")
-else:
-    print("PDF conversion failed!")
+# Render PNGs
+art_dir = r"C:\Users\colon\.gemini\antigravity-ide\brain\e2b3060d-2a4c-4f5e-80de-e591e8db47db"
+for i, p in enumerate(doc_pdf):
+    pix = p.get_pixmap(dpi=200)
+    p_img = os.path.join(HCL_DIR, f"page_{i+1}.png")
+    art_img = os.path.join(art_dir, f"hcltech_page_{i+1}.png")
+    pix.save(p_img)
+    pix.save(art_img)
+    print(f"Rendered: {p_img}")
+
+# Print bounding box metrics
+p1_blocks = doc_pdf[0].get_text("blocks")
+p2_blocks = doc_pdf[1].get_text("blocks")
+print(f"Page 1 last content y: {p1_blocks[-1][3]:.2f} pt")
+print(f"Page 2 first content y: {p2_blocks[0][1]:.2f} pt")
 
 # Create Job Brief
 brief_path = os.path.join(HCL_DIR, "JOB BRIEF - HCL Technologies Graduate Engineer Trainee (VLSI).txt")
-brief_content = """================================================================================
-JOB BRIEF: HCL TECHNOLOGIES — GRADUATE ENGINEER TRAINEE (VLSI / SILICON ENGINEERING)
+brief_text = """================================================================================
+JOB BRIEF: HCL TECHNOLOGIES - GRADUATE ENGINEER TRAINEE (VLSI ROLE)
+CAMPUS PLACEMENT DRIVE — MODEL ENGINEERING COLLEGE (BATCH OF 2027)
 ================================================================================
 
-1. POSITION DETAILS
---------------------------------------------------------------------------------
-- Company: HCL Technologies (HCLTech)
-- Target Division: Engineering and R&D Services (ERS) — Semiconductor & Silicon Engineering
-- Role: Graduate Engineer Trainee (GET) — VLSI Role (Electronics Branches Exclusive)
-- Drive: Campus Placement Drive (MEC Batch of 2027)
-- Slot: B1
-- Pay: ₹4.5 LPA
-- Bond: 1 Year
-- Eligibility Criteria: 7.0 CGPA and above with no active backlogs
-- Eligible Branches: ECE / EV / EEE (Mechanical evaluated separately, CSE excluded from VLSI)
-- Locations: PAN India (Key Semiconductor / VLSI Hubs: Bangalore, Chennai, Noida, Hyderabad)
-- Official Portal: https://www.hcltech.com/careers
+1. POSITION OVERVIEW:
+   Company: HCL Technologies (HCLTech)
+   Role: Graduate Engineer Trainee (GET) — VLSI Role
+   Drive Category: On-Campus Recruitment Drive (Slot B1)
+   Eligible Batches: B.Tech 2027 Passing Out Batch
+   Eligible Disciplines: Electronics & Communication Engineering (ECE), 
+                         Electronic & VLSI Engineering (EV), 
+                         Electrical & Electronics Engineering (EEE)
+                         [Note: Computer Science branches excluded from VLSI post]
+   Compensation (CTC): INR 4.5 LPA
+   Service Agreement: 1 Year Service Bond
 
-2. ROLE CONTEXT & VLSI TECHNICAL SCOPE
---------------------------------------------------------------------------------
-HCLTech Engineering and R&D Services (ERS) is among the largest global semiconductor engineering
-partners, delivering end-to-end silicon solutions:
-- ASIC / FPGA Design: RTL design using Verilog / SystemVerilog, logic synthesis, FSM modeling.
-- Pre-Silicon Verification: Testbench development, functional simulation, code coverage, UVM methodology.
-- Physical Design (PD): Floorplanning, Placement & Routing (P&R), Clock Tree Synthesis (CTS), Static Timing Analysis (STA).
-- Silicon Validation & Bring-Up: Post-silicon bench bring-up, lab debugging using DSOs and Logic Analyzers, JTAG/SWD validation.
-- Embedded Firmware & Hardware Co-Design: Board support packages (BSP), register-level device drivers, hardware bring-up.
+2. CANDIDATE FIT & ELIGIBILITY:
+   - Minimum Academic Cutoff: CGPA >= 7.0 with 0 active backlogs.
+   - Candidate (Ajith Shajan) Profile:
+     * CGPA: 8.18 / 10 (Clearance with safety buffer)
+     * Active Backlogs: 0
+     * Branch: Electronics & Communication Engineering (Core Fit)
+     * Board Percentages: CBSE 12th (90%), CBSE 10th (93%)
 
-3. CANDIDATE PROFILE HIGHLIGHTS (AJITH SHAJAN)
---------------------------------------------------------------------------------
-- Degree: B.Tech in Electronics and Communication Engineering (ECE), Model Engineering College (MEC).
-- CGPA: 8.18 (Cutoff: 7.0 CGPA — Cleared with strong distinction).
-- Leadership: Chairperson, IEEE Circuits and Systems Society (CAS) MEC Student Branch (Circuits & VLSI focus).
-- Core Hardware:
-  * Automotive 4-Layer BLE-to-CAN Hardware Gateway (4-layer ENIG PCB, ISO 7637-2, DFMEA, 0 DRC/ERC).
-  * Custom STM32F401RE Development Board (Clock routing, LDO regulation, 0 DRC/ERC, DSO bring-up).
-- Digital Stack: Verilog HDL, Digital System Design (DSD), SPI/I2C/UART/CAN bus protocols, Logic Analyzers.
+3. TARGET TECHNICAL COMPETENCIES REQUIRED BY HCLTECH VLSI:
+   - Digital System Design (DSD): Combinational & Sequential Logic, FSMs (Moore & Mealy).
+   - HDL Programming: Verilog HDL, RTL modeling, structural/behavioral synthesis.
+   - Clock Domain Crossing (CDC) & Timing: Metastability resolution, 2-FF synchronizers, Gray code, setup/hold constraints.
+   - Asynchronous FIFO Design: Dual-clock domain pointers, empty/full generation.
+   - Communication Protocols: UART, SPI, I2C, CAN, AXI/APB bus interfacing.
+   - Verification Fundamentals: Testbench design, assertion basics, waveform inspection (ModelSim / GTKWave).
+   - Physical Validation: PCB layout, signal integrity, bench instrumentation (DSOs, Logic Analyzers).
 
-4. PREPARATION CHEAT SHEET FOR TECHNICAL ROUNDS
---------------------------------------------------------------------------------
-1. Digital Logic & Sequential Circuits:
-   - Setup time (T_su), Hold time (T_h), Clock-to-Q delay, Metastability and 2-FF synchronizers.
-   - Max operating frequency: F_max = 1 / (T_cq + T_comb + T_su - T_skew).
-2. Verilog Fundamentals:
-   - Blocking (=) vs Non-blocking (<=) statements; race conditions in synthesis.
-   - Mealy FSM (output depends on input and state) vs Moore FSM (output depends only on state).
-3. Static Timing Analysis (STA):
-   - Setup slack = Required time - Arrival time (Slack >= 0 required).
-   - Hold slack = Arrival time - Required time (Hold violation is catastrophic, cannot fix by slowing clock).
-4. Semiconductor Physics & CMOS:
-   - CMOS Inverter characteristics, dynamic power dissipation P = alpha * C * V^2 * f.
+4. RESUME ALIGNMENT & HIGHLIGHTS:
+   - Project 1: Dual-Clock Asynchronous FIFO with Gray-Code Synchronization (RTL Verilog, CDC, 2-FF, testbench).
+   - Project 2: Configurable UART Controller Core & Baud Rate Generator (Moore/Mealy FSMs, 16x oversampling).
+   - Project 3: Automotive BLE-to-CAN Hardware Gateway (4-layer PCB, 0 DRC/ERC, ISO 7637-2).
+   - Project 4: Custom STM32 Development Board & Bench Bring-Up (Crystal routing, DSO/logic analyzer validation).
+   - Core Certifications: FPGA based DSD using Verilog (C2S & MEC), Chairperson IEEE CAS MEC SB.
 
-================================================================================
-Generated via Career-Ops Command Center | October 2026
+5. SELECTION PROCESS & TIMELINE:
+   - Round 1: Online Technical & Aptitude Assessment (Digital Electronics, Verilog, C, Quantitative Aptitude).
+   - Round 2: Technical Interview (FSM state diagrams, FIFO pointer math, setup/hold time violations, Verilog coding).
+   - Round 3: HR & Leadership Interview.
 ================================================================================
 """
-
 with open(brief_path, "w", encoding="utf-8") as f:
-    f.write(brief_content)
+    f.write(brief_text)
 print(f"Created Job Brief: {brief_path}")
 
-# Create Other Openings file
+# Create Other Openings File
 other_path = os.path.join(HCL_DIR, "HCL Technologies - Other Openings.txt")
-other_content = """================================================================================
-HCL TECHNOLOGIES (HCLTECH) — RELEVANT ENTRY-LEVEL & EARLY CAREER OPENINGS
+other_text = """================================================================================
+HCL TECHNOLOGIES — ACTIVE OPENINGS & TRACKED ROLES (2026-2027)
 ================================================================================
-1. Graduate Engineer Trainee (GET) - VLSI / ASIC Design (Campus Slot B1) [TARGET]
-2. Associate Engineer - Embedded Systems & Firmware (Automotive / Medical ERS)
-3. Junior Hardware Design Engineer - Board Bring-up & PCB Diagnostics
-4. Silicon Validation Trainee - Lab Bring-Up & Pre-Silicon Emulation
-5. Associate Software Engineer - Embedded C / C++ RTOS Devices
 
-Explore continuous off-campus and corporate requirements:
-https://www.hcltech.com/careers
+1. ON-CAMPUS CURRENT DRIVE:
+   - Role: Graduate Engineer Trainee (GET) — VLSI
+   - Compensation: INR 4.5 LPA (Slot B1, 1-Year Service Bond)
+   - Status: Active Campus Placement Registration (MEC Batch of 2027)
+
+2. OFF-CAMPUS / LATERAL EARLY CAREER TRACKS (MONITORING):
+   - Role: Associate Engineer — Silicon / Hardware Engineering
+     URL: https://www.hcltech.com/careers
+     Location: Bangalore / Chennai / Noida
+   - Role: Graduate Engineer Trainee — Embedded & Automotive Systems
+     Location: Bangalore / Hyderabad
+   - Early Careers Hub: https://www.hcltech.com/careers/early-careers
+
 ================================================================================
 """
 with open(other_path, "w", encoding="utf-8") as f:
-    f.write(other_content)
+    f.write(other_text)
 print(f"Created Other Openings: {other_path}")
