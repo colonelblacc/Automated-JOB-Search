@@ -3953,5 +3953,38 @@ companies:
     status: MANUAL
     note: SpaceTech Career Portal
     last_verified: '2026-10-05'
+- name: HCL Technologies
+  category: semiconductor
+  ats: custom
+  careers_url: https://www.hcltech.com/careers
+  india_locations:
+  - Bangalore
+  - Chennai
+  - Hyderabad
+  - Noida
+  - PAN India
+  kerala: false
+  entry_level_titles:
+  - Graduate Engineer Trainee - VLSI
+  - Graduate Engineer Trainee
+  - Associate Engineer - Silicon Design
+  - Junior VLSI Engineer
+  keywords:
+  - VLSI
+  - Verilog
+  - SystemVerilog
+  - ASIC
+  - FPGA
+  - RTL Design
+  - Silicon Engineering
+  - Embedded C
+  priority: HIGH
+  source:
+    type: campus_drive
+    automated: false
+    status: VERIFIED
+    note: Campus Placement Drive MEC 2027 Batch (Slot B1, 4.5 LPA, VLSI Role)
+    last_verified: '2026-10-07'
+
 
 
