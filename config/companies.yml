@@ -4018,6 +4018,42 @@ companies:
     status: VERIFIED
     note: Campus Placement Drive MEC 2027 Batch (6M Intern 25k/mo + 5-7 LPA Full-Time, Edge AI & Robotics)
     last_verified: '2026-10-07'
+- name: Hitachi Energy
+  category: power_systems
+  ats: custom
+  careers_url: https://www.hitachienergy.com/careers
+  india_locations:
+  - Bangalore
+  - Chennai
+  - Vadodara
+  - PAN India
+  kerala: false
+  entry_level_titles:
+  - Graduate Engineer Trainee
+  - Associate Engineer - Embedded Systems
+  - R&D Engineer Trainee - Power Electronics
+  - Hardware Design Trainee
+  keywords:
+  - Embedded Systems
+  - Embedded C
+  - C++
+  - Microcontrollers
+  - FreeRTOS
+  - Power Electronics
+  - Grid Automation
+  - Telemetry
+  - CAN Bus
+  - Industrial Protocols
+  - Hardware Validation
+  - PCB Design
+  priority: HIGH
+  source:
+    type: campus_drive
+    automated: false
+    status: VERIFIED
+    note: Campus Placement Drive MEC 2027 Batch (6M Intern 20k/mo + Full-Time GET, Bangalore/Chennai)
+    last_verified: '2026-10-07'
+
 
 
 
