@@ -68,9 +68,10 @@ clear_runs_from(p17, 1)
 
 # ------ PROJECT SLOT 1: Dual-Clock Asynchronous FIFO ------
 p21 = paras[21]
-set_run(p21.runs[0], "Dual-Clock Asynchronous FIFO with Gray-Code Synchronization")
+set_run(p21.runs[0], "Dual-Clock Asynchronous FIFO Core")
 set_run(p21.runs[1], "")
-set_run(p21.runs[2], " ")
+set_run(p21.runs[2], "")
+set_run(p21.runs[3], "\tTeam ")
 set_run(p21.runs[8], "1")
 
 p22 = paras[22]
@@ -105,7 +106,7 @@ clear_runs_from(p24, 1)
 
 # ------ PROJECT SLOT 2: Configurable UART Controller Core ------
 p26 = paras[26]
-set_run(p26.runs[0], "Configurable UART Controller Core & Baud Rate Generator ")
+set_run(p26.runs[0], "Configurable UART Controller Core ")
 set_run(p26.runs[1], "\t")
 set_run(p26.runs[2], "\t")
 set_run(p26.runs[3], "Team ")
@@ -114,14 +115,16 @@ set_run(p26.runs[5], "ize")
 set_run(p26.runs[6], ":")
 set_run(p26.runs[7], " ")
 set_run(p26.runs[8], "1")
+clear_runs_from(p26, 9)
 
 p27 = paras[27]
-set_run(p27.runs[0], "Digital Design Engineer")
+set_run(p27.runs[0], "RTL Design Engineer")
 p27.runs[0].bold = True
 set_run(p27.runs[1], "\t")
 set_run(p27.runs[2], "\t")
 set_run(p27.runs[3], "2weeks")
 p27.runs[3].italic = True
+clear_runs_from(p27, 4)
 
 p28 = paras[28]
 uart_tech = "Verilog HDL, FSM Design (Moore/Mealy), Baud Division, 16x Oversampling, RTL Simulation"
