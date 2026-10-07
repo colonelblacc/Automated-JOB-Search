@@ -3985,6 +3985,40 @@ companies:
     status: VERIFIED
     note: Campus Placement Drive MEC 2027 Batch (Slot B1, 4.5 LPA, VLSI Role)
     last_verified: '2026-10-07'
+- name: Vedya Labs
+  category: edge_ai
+  ats: custom
+  careers_url: https://vedya.ai
+  india_locations:
+  - Hyderabad
+  - Bangalore
+  kerala: false
+  entry_level_titles:
+  - Edge AI Engineer
+  - Robotics Engineer
+  - Embedded AI Intern
+  - Physical AI Engineer
+  keywords:
+  - Edge AI
+  - Embedded AI
+  - Physical AI
+  - TinyML
+  - TensorRT
+  - ONNX
+  - TFLite
+  - PyTorch
+  - OpenCV
+  - YOLOv8
+  - FreeRTOS
+  - Embedded C++
+  priority: HIGH
+  source:
+    type: campus_drive
+    automated: false
+    status: VERIFIED
+    note: Campus Placement Drive MEC 2027 Batch (6M Intern 25k/mo + 5-7 LPA Full-Time, Edge AI & Robotics)
+    last_verified: '2026-10-07'
+
 
 
 
