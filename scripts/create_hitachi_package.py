@@ -62,16 +62,15 @@ p17 = paras[17]
 set_run(p17.runs[0],
     "Engineered real-time embedded firmware and digital sensor interfaces on ESP32S3 under FreeRTOS. "
     "Designed capacitive touch sensing signal conditioning circuits and deterministic state-machine logic. "
-    "Validated hardware-software timing and signal integrity using DSOs and logic analyzers.\t"
+    "Validated hardware-software timing and signal integrity using digital storage oscilloscopes (DSOs) and logic analyzers.\t"
 )
 clear_runs_from(p17, 1)
 
-# ------ PROJECT SLOT 1: Automotive BLE-to-CAN Gateway (Industrial Hardware & Surge Protection) ------
+# ------ PROJECT SLOT 1: Automotive BLE-to-CAN Hardware Gateway ------
 p21 = paras[21]
 set_run(p21.runs[0], "Automotive BLE-to-CAN Hardware Gateway")
 set_run(p21.runs[1], "")
-set_run(p21.runs[2], "")
-set_run(p21.runs[3], "\tTeam ")
+set_run(p21.runs[2], " ")
 set_run(p21.runs[8], "1")
 
 p22 = paras[22]
@@ -99,14 +98,15 @@ clear_runs_from(p23, 4)
 
 p24 = paras[24]
 set_run(p24.runs[0],
-    "Architected an industrial 4-layer BLE 5.3 to CAN FD gateway with 9V\u201336V ISO 7637-2 power conditioning and TPS2116 failover. "
-    "Released production Gerbers and BOM with 0 DRC violations and 0 ERC violations."
+    "Architected an industrial 4-layer (ENIG, 50\u03a9 CPWG, 90\u03a9 diff) BLE 5.3 to CAN FD gateway with 9V\u201336V ISO 7637-2 power conditioning. "
+    "Engineered multi-rail power with LM5164 buck and TPS2116 <2\u03bcs battery failover; conducted formal AIAG/VDA DFMEA. "
+    "Released manufacturing Gerbers and BOM (73 items, 109 components) with 0 DRC violations and 0 ERC violations."
 )
 clear_runs_from(p24, 1)
 
-# ------ PROJECT SLOT 2: Custom STM32 Development Board & Bench Bring-Up ------
+# ------ PROJECT SLOT 2: Custom STM32 Dev Board ------
 p26 = paras[26]
-set_run(p26.runs[0], "Custom STM32 Development Board ")
+set_run(p26.runs[0], "Custom STM32 Development Board & Bench Bring-Up ")
 set_run(p26.runs[1], "\t")
 set_run(p26.runs[2], "\t")
 set_run(p26.runs[3], "Team ")
@@ -115,7 +115,6 @@ set_run(p26.runs[5], "ize")
 set_run(p26.runs[6], ":")
 set_run(p26.runs[7], " ")
 set_run(p26.runs[8], "1")
-clear_runs_from(p26, 9)
 
 p27 = paras[27]
 set_run(p27.runs[0], "Hardware Designer")
@@ -124,10 +123,9 @@ set_run(p27.runs[1], "\t")
 set_run(p27.runs[2], "\t")
 set_run(p27.runs[3], "2weeks")
 p27.runs[3].italic = True
-clear_runs_from(p27, 4)
 
 p28 = paras[28]
-stm_tech = "KiCad (2-Layer), STM32F401RE (ARM Cortex-M4), 3.3V LDO, Crystal Routing, FreeRTOS, DSOs, Logic Analyzers"
+stm_tech = "KiCad (2-Layer), STM32F401RE (ARM Cortex-M4), 3.3V LDO, FreeRTOS, SPI, I2C, UART, SWD Debug"
 set_run(p28.runs[0], "Technologies Use")
 p28.runs[0].bold = True
 p28.runs[0].italic = True
@@ -142,14 +140,14 @@ p28.runs[3].italic = True
 
 p29 = paras[29]
 set_run(p29.runs[0],
-    "Designed a 2-layer STM32F401RE board with crystal routing and LDO decoupling (0 DRC/ERC). "
-    "Brought up bare-metal firmware under FreeRTOS; verified bus timings using digital storage oscilloscopes (DSOs)."
+    "Designed and laid out a 2-layer STM32F401RE development board with LDO regulation and crystal routing (0 DRC violations and 0 ERC violations). "
+    "Brought up bare-metal firmware under FreeRTOS; verified SPI, I2C, and UART bus timings on bench using digital storage oscilloscope (DSO) and logic analyzer."
 )
 clear_runs_from(p29, 1)
 
-# ------ PROJECT SLOT 3: Landslide Tracker (Remote RF Telemetry & Sensor Fusion) ------
+# ------ PROJECT SLOT 3: Edge AI Dynamic Braille System ------
 p30 = paras[30]
-set_run(p30.runs[0], "Landslide Tracker and Response System")
+set_run(p30.runs[0], "Edge AI based Dynamic Braille System")
 set_run(p30.runs[1], "\t")
 set_run(p30.runs[2], "\tTeam Size")
 set_run(p30.runs[3], ":")
@@ -157,16 +155,16 @@ set_run(p30.runs[4], " ")
 set_run(p30.runs[5], "4")
 
 p31 = paras[31]
-set_run(p31.runs[0], "Embedded Lead")
+set_run(p31.runs[0], "Hardware Lead")
 p31.runs[0].bold = True
 set_run(p31.runs[1], "\t")
 set_run(p31.runs[2], "\t")
-set_run(p31.runs[3], "4days")
+set_run(p31.runs[3], "1week")
 p31.runs[3].italic = True
 clear_runs_from(p31, 4)
 
 p32 = paras[32]
-ls_tech = "ESP-32, LoRa (Ra-02 433 MHz), Embedded C, Accelerometer, Soil Moisture, Anomaly Detection, RF Mesh"
+braille_tech = "Raspberry Pi 5, Arduino, Python, Edge ML (Gemma 2B), PaddleOCR, SG90 Servos, UART, TinyML"
 set_run(p32.runs[0], "Technologies Use")
 p32.runs[0].bold = True
 p32.runs[0].italic = True
@@ -175,40 +173,38 @@ p32.runs[1].bold = True
 p32.runs[1].italic = True
 set_run(p32.runs[2], " ")
 p32.runs[2].italic = True
-set_run(p32.runs[3], ls_tech)
+set_run(p32.runs[3], braille_tech)
 p32.runs[3].bold = False
 p32.runs[3].italic = True
 
 p33 = paras[33]
 set_run(p33.runs[0],
-    "Designed an off-grid telemetry node performing multi-sensor acquisition and threshold anomaly detection in C. "
-    "Architected a peer-to-peer 433 MHz LoRa RF mesh cross-verifying telemetry across nodes for reliable alerting."
+    "Architected hardware actuation interfacing Raspberry Pi 5 via UART to an ESP32 controlling servo arrays for tactile Braille output, integrating bilingual OCR and quantized on-device LLM."
 )
 clear_runs_from(p33, 1)
 
-# ------ PROJECT SLOT 4: Dynamic Braille (Actuation & Hardware Control) ------
+# ------ PROJECT SLOT 4: Landslide Tracker (Remote RF Telemetry & Sensor Fusion) ------
 p34 = paras[34]
-set_run(p34.runs[0], "Edge AI based Dynamic Braille")
-set_run(p34.runs[1], " System")
-set_run(p34.runs[2], "")
+set_run(p34.runs[0], "Landslide Tracker")
+set_run(p34.runs[1], " and Response ")
+set_run(p34.runs[2], "System")
 
 p35 = paras[35]
-set_run(p35.runs[0], "Hardware Lead")
+set_run(p35.runs[0], "Hardware Designer")
 p35.runs[0].bold = True
 set_run(p35.runs[1], "\t")
 set_run(p35.runs[2], "\t")
-set_run(p35.runs[3], "1week")
+set_run(p35.runs[3], "4days")
 p35.runs[3].italic = True
-clear_runs_from(p35, 4)
 
 p36 = paras[36]
-br_tech = "Raspberry Pi 5, Arduino, Python, Edge ML, Multiprocessing, UART Protocol, Micro-Servo Actuators"
-br_desc = (
-    "Architected hardware control interfacing Raspberry Pi 5 via UART to an MCU controlling servo arrays for tactile Braille output, integrating OCR and on-device processing."
+ls_tech = "ESP-32, LoRa Module (Ra-02 433 MHz), Embedded C, Sensor Fusion, Anomaly Detection, Low-Power RF"
+ls_desc = (
+    "Designed an IoT sensing node performing multi-sensor fusion and threshold anomaly detection in C, cross-verifying telemetry over a 433 MHz LoRa mesh for real-time alerting."
 )
-set_run(p36.runs[1], br_tech)
+set_run(p36.runs[1], ls_tech)
 set_run(p36.runs[2], ".                                                                ")
-set_run(p36.runs[4], br_desc)
+set_run(p36.runs[4], ls_desc)
 p36.runs[4].bold = False
 p36.runs[4].italic = False
 clear_runs_from(p36, 5)
@@ -326,10 +322,10 @@ CAMPUS PLACEMENT DRIVE — MODEL ENGINEERING COLLEGE (BATCH OF 2027)
    - Instrumentation & Bring-Up: Hands-on bench verification using Digital Storage Oscilloscopes (DSOs) and Logic Analyzers.
 
 4. RESUME ALIGNMENT & HIGHLIGHTS:
-   - Project 1: Automotive BLE-to-CAN Hardware Gateway (4-layer PCB, ISO 7637-2 surge protection, 9-36V, TVS clamps, DFMEA, 0 DRC/0 ERC).
-   - Project 2: Custom STM32 Development Board & Bench Bring-Up (Crystal clock routing, LDO decoupling, FreeRTOS, DSO bench validation).
-   - Project 3: Landslide Tracker and Response System (433 MHz LoRa RF mesh, remote telemetry, sensor fusion, off-grid power optimization).
-   - Project 4: Edge AI based Dynamic Braille System (Microcontroller UART actuation, deterministic hardware state machines).
+   - Project 1: Automotive BLE-to-CAN Hardware Gateway (4-layer PCB, ISO 7637-2 surge protection, 9-36V, TVS clamps, DFMEA, 0 DRC violations and 0 ERC violations).
+   - Project 2: Custom STM32 Development Board & Bench Bring-Up (Crystal clock routing, LDO decoupling, FreeRTOS, digital storage oscilloscope (DSO) validation, 0 DRC violations and 0 ERC violations).
+   - Project 3: Edge AI based Dynamic Braille System (Microcontroller UART actuation, deterministic hardware state machines).
+   - Project 4: Landslide Tracker and Response System (433 MHz LoRa RF mesh, remote telemetry, sensor fusion, off-grid power optimization).
    - Core Certifications: Chairperson IEEE CAS MEC SB, FPGA based DSD using Verilog, IBM SkillsBuild Agentic AI.
 
 5. SELECTION PROCESS & TIMELINE:
